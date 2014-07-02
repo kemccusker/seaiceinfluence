@@ -1,0 +1,426 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% PREAMBLE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% The following two commands will generate a PDF that follows all the requirements for submission
+% and peer review.  Uncomment these commands to generate this output (and comment out the two lines below.)
+%
+% DOUBLE SPACE VERSION FOR SUBMISSION TO THE AMS
+\documentclass[12pt]{article}
+\usepackage{ametsoc}
+\usepackage{graphicx}
+\usepackage{color}
+\usepackage{lineno}
+\linenumbers
+
+%
+% The following two commands will generate a single space, double column paper that closely
+% matches an AMS journal page.  Uncomment these commands to generate this output (and comment
+% out the two lines above. FOR AUTHOR USE ONLY. PAPERS SUBMITTED IN THIS FORMAT WILL BE RETURNED
+% TO THE AUTHOR for submission with the correct formatting.
+%
+
+% TWO COLUMN JOURNAL PAGE LAYOUT FOR AUTHOR USE ONLY
+%\documentclass[10pt]{article}
+%\usepackage{ametsoc2col}
+
+
+\newcommand{\chapdef}{\section} % this is either a chapter (thesis) or section (paper)
+\newcommand{\sectdef}{\subsection} % this is either a section (thesis) or a subsection (paper)
+
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% ABSTRACT
+%
+% Enter your Abstract here
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\myabstract}{Doing my abstract here....}
+
+\begin{document}
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% TITLE
+%
+% Enter your TITLE here
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\title{\textbf{\large{Atmospheric response to simulated historical sea ice loss}}}
+%
+% Author names, with corresponding author information. 
+% [Update and move the \thanks{...} block as appropriate.]
+%
+\author{\textsc{Kelly E. McCusker}
+				\thanks{\textit{Corresponding author address:} 
+				Kelly McCusker, School of Earth and Ocean Sciences, 
+				University of Victoria, Victoria, BC V8V 1B5.
+				\newline{E-mail: kemccusk@uvic.ca}}\quad\textsc{, John Fyfe, and Michael Sigmond}\\
+\textit{\footnotesize{University of Victoria, Victoria, British Columbia, Canada}}
+%\and 
+%\centerline{\textsc{Extra Author}}\\% Add additional authors, different insitution
+%\centerline{\textit{\footnotesize{Affiliation, City, State/Province, Country}}}
+}
+%
+% Formatting done here...Authors should skip over this.  See above for abstract.
+\ifthenelse{\boolean{dc}}
+{
+\twocolumn[
+\begin{@twocolumnfalse}
+\amstitle
+
+% Start Abstract (Enter your Abstract above.  Do not enter any text here)
+\begin{center}
+\begin{minipage}{13.0cm}
+\begin{abstract}
+	\myabstract
+	\newline
+	\begin{center}
+		\rule{38mm}{0.2mm}
+	\end{center}
+\end{abstract}
+\end{minipage}
+\end{center}
+\end{@twocolumnfalse}
+]
+}
+{
+\amstitle
+\begin{abstract}
+\myabstract
+\end{abstract}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% MAIN BODY OF PAPER
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\chapdef{Introduction}
+%\sectdef{Motivation}
+\label{sec:intro}
+Arctic sea ice has been making a dramatic transformation over the late 20th and early 21st century due in large part to increasing greenhouse gas concentrations. Sea ice concentrations are at record lows since at least 1900@@, multi-year ice is reducing, and the ice overall is thinner. These changes are both caused by greenhouse warming and help to amplify greenhouse warming in the high northern latitudes such that the Arctic is warming at a rate 2-3 times as large as the rest of the globe (@@). The reduction in sea-ice area unmasks the ocean below, allowing more heat to flux from the warmer waters to the relatively cold atmosphere. The question remains as to how large of an influence this loss of sea ice has on the atmosphere, both locally and remotely.
+
+Much study has 
+
+An important question
+
+\chapdef{Model and Simulations}
+\label{sec:methods}
+We perform our experiments using the National Center for Atmospheric Research (NCAR) Community Climate System Model version 3 (CCSM3) (Collins et al. 2006), which has components for atmosphere, ocean, land, and sea ice. We run each simulation with T42 resolution (approximately 2.8$^\circ$) in the atmosphere and a nominal 1 degree resolution in the ocean. The atmosphere has 26 vertical levels while the ocean has 40 vertical levels. 
+
+We run a suite of simulations with the atmosphere component of the CCSM3 coupled to either a slab ocean or to the full Ocean General Circulation Model (OGCM) of CCSM3 to determine the effect of ocean dynamics on the climatic response to geoengineering (see Table \ref{tbl:experiments}). The slab ocean utilized is a modified version of the more common slab ocean model with motionless sea ice. Our version has the complete CCSM3 thermodynamic-dynamic sea ice model, and we refer to it as the Dynamic sea Ice Slab Ocean Model (DISOM). This model was introduced and used by \cite{holland06} and \cite{bitz06}. The full atmosphere-ocean general circulation model configuration of CCSM3 is called OGCM in this paper. The ocean heat flux convergence (OHFC) prescribed in the DISOM simulations is derived from the surface flux and ocean heat storage climatology of the full OGCM from a 1990's CCSM3 control so that the mean state of the DISOM and OGCM control simulations are the same. We use the ocean component (i.e., DISOM and OGCM) to differentiate between the model configurations when referring to simulations (see Table \ref{tbl:experiments}). 
+
+\begin{table}[t]
+\centering
+\caption{Experiment Details. The run names can be understood in this way: \textit{control} is the control run, \textit{aero} has a prescribed sulfate layer that is annually periodic in DISOM and ramped in OGCM, and \textit{co2} carbon dioxide doubled in DISOM and ramped in OGCM. DISOM is the Dynamic sea Ice Slab Ocean Model and OGCM has both dynamic sea ice and ocean. Columns specify the experiment name, type of ocean component, carbon dioxide concentration, and annual mean total atmospheric burden of sulfate, in units of teragrams (10$^{12}$g) of sulfur equivalent. The value of 1x$CO_2$ is 355 ppm.
+}
+\vspace{0.5cm}
+\begin{tabular}{|c|c|cc|}
+    \hline
+Experiment & Ocean type     &  $CO_2$ Conc   & Sulfate aerosol burden [TgS]\\
+    \hline
+control              &                                      & 1x$CO_2$  & 0\\
+aero              & DISOM   &    1x$CO_2$          & 8 \\
+co2   &                                  & 2x$CO_2$ & 0 \\
+geoco2   &                          & 2x$CO_2$  & 8\\
+\hline
+control                 &                             &  1x$CO_2$ & 0\\
+aero                  &   OGCM              &  1x$CO_2$   &  Linear ramp from 0\\
+co2             &                         & 1\% Ramp from 1990 conc       &  0\\
+geoco2 &  & 1\% Ramp from 1990 conc & Linear ramp from 0\\
+    \hline    
+\end{tabular}
+\label{tbl:experiments}
+\end{table}
+
+We conduct experiments with various carbon dioxide concentrations, some in combination with geoengineering. We do this using both configurations of CCSM3, (i) DISOM (equilibrium) and (ii) OGCM (transient), so that we conduct a total of 8 simulations, listed in Table \ref{tbl:experiments}. For each model configuration we have a \textit{control} run (annually periodic external forcing from 1990s levels, with CO$_2$=355ppm and other greenhouse gases set to 1990 levels), an increased $CO_2$ run (\textit{co2}), a stratospheric sulfate-only run (\textit{aero}), and a ``net" run that has both increased $CO_2$ and a sulfate layer (\textit{geoco2}).
+
+The forcings are applied instantaneously in the DISOM experiments, and then we run the model to equilibrium (a minimum of 40 years). We analyze the last 40 years of the DISOM \textit{control} and \textit{geoco2} runs and the last 20 years of the \textit{co2} and \textit{aero} runs. The CCSM3 OGCM \textit{control} and \textit{co2} runs were obtained from NCAR \citep{collins06}. Carbon dioxide concentration is ramped at 1\% per year from the 1990 level. We ramp the sulfate burden linearly from zero, so that the amount prescribed at any given time provides a global average negative radiative forcing that approximately equals the positive radiative forcing of the carbon dioxide. In the case of \textit{geoco2}, we integrated the model until the carbon dioxide reached four times modern concentrations of CO$_2$ and the sulfate burden reached 16 teragrams of sulfur equivalent (TgS). Figure \ref{fig:tsts}a depicts the years for which means are computed for each transient simulation. We have one additional ensemble member for the OGCM \textit{geoco2} simulation that was not available during the initial analysis and writing of the paper. The ensemble member exhibits essentially the same global mean changes (to within 1\%) and spatial pattern of response as the \textit{geoco2} analyzed here, providing greater robustness to our conclusions.
+
+The sulfate forcing, or imposed ``geoengineered layer", is a prescribed burden of sulfate (SO$_4$) in the stratosphere and has a monthly climatology, repeating annually. The annually and zonally averaged sulfate concentration multiplied by layer thickness at the time of CO$_2$ doubling is shown in Figure \ref{fig:sulf}, which corresponds to a total annual mean burden of 8 TgS. By prescribing the aerosol distribution, we ignore a major additional source of uncertainty in our study: the chemistry of sulfate formation and its transport. However, these processes were taken into account in the generation of the SO$_4$ climatology. The SO$_4$ climatology is taken from the results of a model study by \cite{rasch08a}, whereby they continuously injected a prescribed size distribution of SO$_2$ (sulfur dioxide) into the stratosphere at an altitude of 25 km from 10$^\circ$N to 10$^\circ$S, where it was transported by winds and interacted chemically. They used a prescribed size distribution with a dry mode radius, standard deviation, and effective radius values of 0.05, 2.03, 0.17 $\mu$m, respectively, which is meant to simulate a volcanic-like size distribution. Once in the stratosphere, the SO$_2$ oxidizes to form sulfate aerosol, which is transported and removed via wet and dry deposition. 
+
+In the study by \cite{rasch08a}, the volcanically-sized aerosol distribution did not fully cancel the warming due to doubled carbon dioxide. Because we prescribe the aerosol distribution, we have scaled up the sulfate climatology by the same fraction at each latitude and height in the atmosphere, to better cancel the equilibrium warming under the 2xCO$_2$ scenario experiment in DISOM. This results in an annual mean prescribed burden of sulfur equivalent in our simulations of 8 TgS (to counteract 2xCO$_2$) compared with 5.9 TgS in \cite{rasch08a}. It has been shown that there may be some limitation to the effectiveness of sulfate aerosols when the microphysics of sulfur dioxide injection and sulfate aerosol formation are taken into account, such that the burden required to cancel a doubling of CO$_2$, for instance, would be greater than what is estimated in our study \citep{heckendorn09}, and some have suggested that directly injecting sulfuric acid vapor may improve the mass to radiative forcing ratio \citep{pierce10}. These complications are ignored here, as we prescribe sulfate aerosols with a particular distribution and specified optical properties. %However, we focus our attention on the climate response induced by an aerosol layer that, in our model, achieves a radiative forcing that is approximately equal and opposite to that of doubled CO$_2$, which assumes that such a layer can be deployed in reality.
+
+\begin{figure}[t]
+\centering
+ \noindent\includegraphics[width=0.5\textwidth]
+{emergpaperfigs_14.jpg}
+\caption{The annual mean, zonal mean Sulfate concentration multiplied by layer thickness (kg/m$^2$) at 2xCO$_2$. The corresponding global total burden is 8 TgS.}
+\label{fig:sulf}
+\end{figure}
+
+\chapdef{Results}
+\label{sec:results}
+Our suite of experiments shows the extent to which global and annual mean warming from rising CO$_2$ can be offset by placing sulfate aerosols with particular optical properties and spatial distribution in the stratosphere. We first show global-mean, annual-mean results and annual mean spatial maps as a baseline. We then turn our focus to specific regions, namely the Arctic, West Antarctica and the Antarctic Peninsula, and the tropics, in order to examine the results in the context of climate emergencies.
+
+\sectdef{Global}
+
+Table \ref{tbl:means} lists globally, annual averaged values of temperature, precipitation, and sea-ice area and volume from the set of simulations. It is no surprise that the equilibrium temperature change of the DISOM \textit{geoco2} case relative to the DISOM \textit{control} is near zero (Table \ref{tbl:means}) because we adjusted the concentration of aerosols specified in the DISOM \textit{geoco2} run through several iterations. It is more remarkable that the transient warming in the OGCM forced by ramping CO$_2$ at the rate of 1\% per year, shown in Figure \ref{fig:tsts}a, can be effectively canceled up to about the 70th year after forcing commencement (the time of CO$_2$ doubling) by linearly ramping sulfate aerosol concentration in the stratosphere. 
+
+For reference, Figures \ref{fig:tsann}a and \ref{fig:tsann}b show the spatial maps of annual average surface temperature change between the DISOM and OGCM \textit{co2} and \textit{control} simulations and Figures \ref{fig:tsann}c and \ref{fig:tsann}d show the companion maps for \textit{geoco2}. In the annual mean, the presence of a sulfate aerosol layer is able to cancel surface temperature rises due to increased CO$_2$ nearly everywhere but the Arctic, which will be discussed in more detail in the Arctic subsection.
+
+The OGCM exhibits a slight global mean warming at the end of the analysis period (see Figure \ref{fig:tsts}a). Hence, we also compute the linear temperature trend spatially for the period before the global mean temperature diverges from the \textit{control} (years 11-80). Figure \ref{fig:trends} shows the magnitude of the temperature change extrapolated to year 80 (the midpoint of the analysis period) computed using the linear trend of annual mean global mean surface temperature for years 11-80. The pattern that emerges matches that seen in Figure \ref{fig:tsann}d, indicating that the spatial pattern of response is fundamental to the combination of increasing CO$_2$ and increasing sulfate layer burden, and is not influenced by the existence of a residual global mean warming (0.08$^\circ$C in the forty year average).  
+
+\begin{table}[t]
+\centering
+    \caption{Global annual-mean values (top) and differences (bottom) from respective control runs. OGCM means are calculated for the 40 years surrounding the time of CO$_2$ doubling in the \textit{control} and \textit{geoco2} runs. The OGCM \textit{co2} and \textit{aero} cases are 20 year means surrounding the time of CO$_2$ doubling. Surface temperature [K], precipitation rate [mm/day], total northern hemisphere (NH) sea-ice area, and total southern hemisphere (SH) sea-ice area [$10^{13}m^2$], total NH sea-ice volume, total SH sea-ice volume [$10^{13}m^3$].
+    }
+    \vspace{0.5cm}
+\begin{tabular}{|c|c|cc|c|c|}
+    \hline
+Model & Exp  & Sfc Temp &  Precip &  SIA NH, SH  & SIVol NH, SH  \\
+    \hline
+%    \hline
+DISOM & control   &     288.1    &       2.80             &    1.11, 1.23     &   2.75, 2.07          \\
+OGCM & control   &    288.0     &      2.79             &       1.12, 1.37  &     2.74, 2.45      \\
+\hline
+\hline
+      &  & $\triangle$Sfc Temp & \%$\triangle$ Precip & \%$\triangle$ SIA NH, SH &\%$\triangle$ SIVol NH, SH \\
+\hline
+%\hline
+DISOM & geoco2  &    0.09     &    -1.47      & -3.89, -0.10   &    -9.59, 1.98     \\
+OGCM & geoco2   &   0.08      &   -1.43       &  -2.17, -2.21   &   -3.12, -3.09       \\
+\hline
+DISOM & aero              &  -3.36      &  -8.54  &    25.5, 135   &     128.6, 123.6     \\
+OGCM & aero              &  -1.27       &   -3.70   &   15.4, -0.19   &    65.9, 3.03       \\
+\hline
+DISOM & co2          &    2.70        &    5.21     &  -28.8, -45.3   &     -52.0, -22.4     \\
+OGCM & co2          &    1.38         &     2.15      & -25.8, -10.3   &    -57.3, -15.7       \\
+\hline
+\end{tabular}
+\label{tbl:means}
+\end{table}
+
+
+\begin{figure}[t]
+\centering
+ \noindent\includegraphics[width=1\textwidth]
+{emergpaperfigs_3.jpg}
+\caption{Timeseries of global-mean annual-mean (a) surface temperature ($^\circ$C), (b) precipitation (mm/day), and (c) top of atmosphere (TOA) net flux (positive down, W/m$^2$) for OGCM experiments. Ramping of sulfate and/or carbon dioxide begins in year 10 in the figure. The 1870's pre-industrial control is included for reference (black, dashed line). The boxes indicate the years of averaging for all results, unless stated otherwise in the text. Red and Blue dashed: 70-89, Black and Green dashed: 60-99.}
+\label{fig:tsts}
+\end{figure}
+
+\begin{figure}[t]
+\centering
+ \noindent\includegraphics[width=1\textwidth]
+{emergpaperfigs_2.jpg}
+\caption{Annual mean surface temperature ($^\circ$C) difference between \textit{co2} and \textit{control} (a-b) and \textit{geoco2} and \textit{control} (c-d) for DISOM (at equilibrium) (a, c) and OGCM simulations (at time of CO$_2$ doubling) (b, d). In (a-b), the dots indicate regions of significant cooling at the 95\% level, based on the Student's t-test. In (c-d), the dots indictate regions where there is significant warming or cooling at the 95\% level.} 
+\label{fig:tsann}
+\end{figure} 
+
+\begin{figure}[t]
+\centering
+ \noindent\includegraphics[width=3.4in]
+{emergpaperfigs_15.jpg}
+\caption{Linear trend in the OGCM \textit{geoco2} simulation for years 11-80 (before global mean surface temperature diverges from the \textit{control}) at year 80, the midpoint of our analysis period. This shows the pattern and amplitude of warming expected at year 80, given the trend computed in years when there is no global mean surface temperature trend. The pattern and amplitude are similar to the annual mean change in temperature between the OGCM \textit{geoco2} and \textit{control} shown in Figure \ref{fig:tsann}d. Thus, the pattern of response is fundamental to the combination of the sulfate layer and increased CO$_2$, not to the weakening sulfate effect at the end of the OGCM \textit{geoco2} analysis period.}
+\label{fig:trends}
+\end{figure}
+
+
+When aerosol concentrations are designed to cancel global warming, they do not also cancel global mean precipitation changes \citep{bala08, robock08, ricke10}. Indeed placing sulfate aerosols in the stratosphere reduces precipitation more than it increases on average from raising CO$_2$. Thus, the globally averaged precipitation rate declines by between 1 and 2\% at the time of CO$_2$ doubling for both transient and equilibrium \textit{geoco2} cases relative to their \textit{controls} (see Table \ref{tbl:means}). Figure \ref{fig:tsts}b shows the change in precipitation with time for the OGCM simulations. Although the globally averaged surface temperature stays nearly constant for the first 80 years of the \textit{geoco2} experiment, precipitation slowly declines with increasing sulfate burden. This result supports the theory put forth in \cite{allen02}, whereby longwave and shortwave radiation affect precipitation and temperature differently. 
+
+Figure \ref{fig:tsts}c displays the top of atmosphere (TOA) net flux anomaly from the control simulation for the OGCM \textit{co2}, \textit{aero}, and \textit{geoco2}. The OGCM \textit{geoco2} has an annual mean TOA imbalance anomaly of 0.06 $Wm^{-2}$ during our analysis period, while the DISOM \textit{geoco2} has an imbalance of less than 0.01 $Wm^{-2}$, indicating that the \textit{geoco2} simulations are well balanced and the radiative forcing from the imposed sulfate layer successfully counterbalances that from increased CO$_2$ during the analysis period. 
+
+\sectdef{Vertical structure}
+
+The global average forcing at the top of the atmosphere in the \textit{geoco2} experiments is effectively zero until the time of CO$_2$ doubling, but there are important spatial differences, particularly in the vertical. We discuss and show the DISOM results of the vertical and zonal mean temperature in this section as an example, however the OGCM has a very similar vertical temperature response to the combined CO$_2$ and aerosol forcing. Raising CO$_2$ causes tropospheric warming and slight-to-no cooling in the lower stratosphere (Figure  \ref{fig:tuvertann}a). The sulfate aerosol concentration is at a maximum over the tropics, where the original injection of sulfur dioxide in the \cite{rasch08a} study was located, which causes an increase in absorption of solar and infrared radiation there compared to the control climate. By virtue of this spatial distribution, the sulfate aerosol produces a local warming maximum in the lower stratosphere over the tropical region (Figure \ref{fig:tuvertann}b). The net result of doubled CO$_2$ and a sulfate layer on zonal mean temperature is to leave the troposphere much like the 1990s control (Figure \ref{fig:tuvertann}c). Yet in the stratosphere, the cooling due to increased carbon dioxide does little to abate the tropical stratosphere sulfate-driven warming. These non-neglible changes in the vertical structure of temperature in the atmosphere cause noticeable differences to the zonal mean wind field. 
+
+\begin{figure}[t]
+\centering
+ \noindent\includegraphics[width=1\textwidth]
+{emergpaperfigs_4.jpg}
+\caption{Zonal-mean, annual-mean temperature (a-c) and wind (d-f) in the DISOM simulations. Contours are the \textit{control}, in colors are differences between the perturbed experiment and the control experiment. The thick, black line indicates the zero line, dashed is negative temperature or easterly wind anomaly and solid is positive temperature or westerly wind anomaly, and the contour interval is 1.0 $^\circ$C or 8 m/s.}
+\label{fig:tuvertann}
+\end{figure}
+
+Figures \ref{fig:tuvertann} d-f display the vertical structure changes in zonal mean zonal wind in the DISOM perturbation experiments. In the annual mean, enhanced CO$_2$ forces the southern hemisphere (SH) polar stratospheric vortex to shift equatorward, while the northern hemisphere (NH) polar stratospheric vortex displays a broad, weak enhancement in the upper atmosphere (Figure \ref{fig:tuvertann}d). The subtropical tropospheric jets and zonal mean surface winds change little due to doubled CO$_2$. In contrast, forcing by sulfate aerosols alone causes a clear poleward shift of the stratospheric and tropospheric polar vortex in the SH and a strengthening of the stratospheric polar vortex in the NH (Figure \ref{fig:tuvertann}e). The net result of the combined forcings in \textit{geoco2} looks similar to that of the sum of the two separate forcings. In the NH the polar vortex is strengthened even more in \textit{geoco2} than in \textit{co2} (an increase in mean zonal wind of about 30\% at the peak location compared to 20\% in \textit{co2}), and this strengthening is especially apparent in DJF (not shown) where the strengthening also extends down to the surface. In the SH the net result is an equatorward shift of the stratospheric polar vortex and a poleward shift in the jet in the troposphere. The zonal mean temperature and wind response patterns look very similar in the OGCM for the \textit{geoco2} case. Thus, the addition of sulfates does not counteract the circulation anomalies due to increased CO$_2$. We will see in the following sections that these upper level differences are indeed manifested at the surface as changes in climate (although the surface wind response tends to be weaker in OGCM than DISOM). 
+
+\sectdef{The Arctic}
+
+Figures \ref{fig:tsgdcnh}a and \ref{fig:tsgdcnh}b display the change in summer (June, July, August - JJA) surface temperature in the \textit{geoco2} simulations as compared to the \textit{control} integrations for the DISOM and the OGCM, respectively. Also noted on the figure is the location of the sea-ice edge, defined as the region within which there is a 15\% or greater sea-ice concentration, for \textit{geoco2} (dashed) and \textit{control} (solid). As expected, summer temperatures over sea ice remain unchanged, as ice keeps the air temperature at about 0$^\circ$C in summer. However, northern land surfaces are over-cooled in both models, at some locations by over 1$^\circ$C, with the notable exception of warming in Greenland. Although the sea-ice edge in the Arctic is nearly unchanged, the NH sea ice volume is reduced by 10.0\% and 2.8\% for DISOM and OGCM, respectively, with the greatest thinning of sea-ice found around Greenland in the DISOM and East Siberian Sea in the OGCM (not shown, but the pattern is very similar to DJF  with slightly greater magnitude changes - see Figure \ref{fig:tsgdcnh}e-f). Additionally, there are reductions in sea-ice concentration (not shown) of up to 10\% in the marginal ice zones, especially in DISOM.
+
+\begin{figure}[t]
+\centering
+ \noindent\includegraphics[width=1\textwidth]
+{emergpaperfigs_5b.jpg}
+\caption{The difference in mean JJA (a-b) and mean DJF surface temperature [$^\circ$C] (c-d) and DJF sea-ice thickness [m] (e-f) between the \textit{geoco2} runs and their corresponding \textit{control} runs. Contours are 15\% sea ice concentration in \textit{control} (solid) and \textit{geoco2} run (dashed).  Results are for DISOM (a,c,e) and OGCM (b,d,f). Dots indicate regions of significant warming or cooling at the 95\% level using the Student's t-test.}
+\label{fig:tsgdcnh}
+\end{figure}
+
+Figures \ref{fig:tsgdcnh}c and \ref{fig:tsgdcnh}d show the change in surface temperature in northern hemisphere winter (December, January, February - DJF). Contrary to JJA, the DJF surface temperature response in \textit{geoco2} displays a broad residual warming throughout much of the Arctic. This is expected, since the impact of aerosols is diminished in the polar night and the warming due to increased CO$_2$ is not compensated for. This warming results in increased water vapor and an increase in surface evaporation throughout the high latitudes that further contributes to the surface warming by an enhanced greenhouse effect. However, there is spatial structure to these temperature changes that cannot be due to the well-mixed CO$_2$, as both model configurations exhibit enhanced regional warming of 2-4$^\circ$C over northern Eurasia. Although this is cooler than a 2xCO$_2$ world, temperature differences are still up to 50\% of the warming expected from 2xCO$_2$ here, with the broadest regional warming occuring in the DISOM model (cf Figure \ref{fig:tsann}a, b with Figure \ref{fig:tsgdcnh} c, d). The sea ice in DJF is decreased in both area (along sea-ice margins, not shown) and volume of 3.5\% and 8.8\% respectively in the DISOM and 2.1\% and 2.8\% in the OGCM, although the sea-ice extent is nearly unchanged. Figure \ref{fig:tsgdcnh}e-f displays the associated pattern of sea-ice thickness change, exhibiting more widespread and greater thinning in the DISOM than OGCM. %@@ %Yet, as in JJA, DJF sea-ice extent is nearly unchanged (see Figure \ref{fig:tsgdcnh}).
+
+Compared with the \textit{control} climate, both the DISOM and the OGCM \textit{geoco2} simulations have enhanced winter west-to-southwesterly winds at 950 mb over northern Eurasia and the northern Atlantic ocean and Nordic seas, with the OGCM 950 mb wind enhancement mostly limited to the Nordic seas (Figure \ref{fig:utsgdcnh}). These increased winds are the near-surface expression of the upper level polar vortex, which is enhanced in winter as described earlier. The 950 mb zonal wind changes are statistically significant  everywhere the magnitude is about 1 $ms^{-1}$ or greater. The circulation anomalies enhance the advection of climatologically warmer and moister marine and lower latitude air into northern Europe and Asia (\textbf{v}$' \cdot \nabla \bar{T} $ and \textbf{v}$' \cdot \nabla \bar{q} $), and help to explain the robust pattern of surface warming over Eurasia. The anomalous moisture transport increases downwelling longwave at the surface directly and also by providing additional water vapor for latent heating of the atmosphere. In the OGCM, Eurasia is also warmed by increased sensible heat advection associated with the reduction in the sea-ice thickness and in the area covered by sea ice to the north of Eurasia. 
+
+The pattern of atmospheric circulation change and surface warming is familiar as the post-volcanic eruption winter response, in which the climate exhibits a positive Arctic Oscillation (AO) phase due to a strengthened polar vortex \citep{robock00, stenchikov02, shindell04}. However, the pattern cannot uniquely be attributed to the stratospheric aerosols in this case. The sulfate alone induces strengthened westerlies at the surface most strongly only over northern Eurasia in the \textit{aero} simulations (not shown), which implies that much of the AO response pattern elsewhere is due to increased CO$_2$, as the \textit{co2} case also exhibits surface circulation changes of the same sign as a positive AO (not shown). This suggests that the sulfate layer does not counteract CO$_2$-induced circulation changes; rather it nudges the circulation in the high northern latitudes in the same way as does increasing CO$_2$. This anomalous circulation plays a dominant role in structuring the pattern of temperature response in northern Eurasia through temperature and moisture advection, which, in addition to local feedbacks, further amplifies downwelling longwave radiation in the region. The anomalous winds also exert a wind stress on the ocean that affects ocean circulation in the OGCM \textit{geoco2} simulation (see Figure \ref{fig:zonstress}b). Note that the zonal wind stress changes exhibited in Figure \ref{fig:zonstress} are comparable between the \textit{co2} (\ref{fig:zonstress}a) and \textit{geoco2} (\ref{fig:zonstress}b) simulations. 
+%These intensified westerlies help to enhance the residual winter surface warming over Eurasia through temperature and moisture advection
+%In addition to general warming due to increased CO$_2$ and associated positive feedbacks, these intensified westerlies help to enhance the residual winter surface warming over Eurasia in both the DISOM and OGCM, and they exert a wind stress on the ocean that affects ocean circulation in the OGCM \textit{geoco2} simulation (see Figure \ref{fig:zonstress}b). Note that the zonal wind stress changes exhibited in Figure \ref{fig:zonstress} are comparable between the \textit{co2} (\ref{fig:zonstress}a) and \textit{geoco2} (\ref{fig:zonstress}b) simulations. 
+%Thus, moisture convergence must play a role in the enhanced Eurasian surface warming as well. Thank you for pointing out this important omission. We have added 2 panels to Figure 7 in the paper (included here for reference) showing the climatological integrated water vapor in the surface layers (surface - 870 mb) along with anomalous 950 mb winds. The DISOM shows a clear anomalous advection of moister air to the warmed region. The magnitude of these anomalous winds are comparable or greater to the mean winds there. The OGCM also shows anomalous advection of moister air to the region, with additional contributions to warming from sensible heat transport from regions of reduced sea-ice concentration and thickness.
+
+\begin{figure}[t]
+%\vspace{-5.cm}
+%\hspace{-1.cm}
+\centering
+ \noindent\includegraphics[width=1\textwidth]
+{emergpaperfigs_6.jpg}
+\caption{Difference in mean DJF 950 mb winds between the \textit{geoco2} runs and their corresponding \textit{control} runs for the DISOM (left) and OGCM (right) models. In color, (a-b) the climatological DJF surface temperature ($^\circ$C) and (b-c) the climatological DJF integrated water water vapor from the surface to 870 mb (kg/m$^2$).}
+\label{fig:utsgdcnh}
+\end{figure} 
+
+\begin{figure}[t]
+\centering
+ \noindent\includegraphics[width=1\textwidth]
+{emergpaperfigs_13.jpg}
+\caption{Annual mean OGCM zonal wind stress difference (dyn/cm) between \textit{co2} and \textit{control} (a) and \textit{geoco2} and \textit{control} (b). }
+\label{fig:zonstress}
+\end{figure}
+
+The spatial extent of polar residual winter surface warming in the OGCM simulation is much smaller than in the DISOM. In particular, the \textit{geoco2} OGCM exhibits cooler SSTs near the United Kingdom and south of Greenland (where the DISOM does not), near regions of deep water formation. This cooling in the North Atlantic in the OGCM (which exists in the annual mean as well) can only be due to changes in ocean heat transport - the only difference between the two model configurations. In Figure \ref{fig:arctempamocall}, we show annual mean, Atlantic and Arctic Ocean zonal mean potential temperature and Atlantic meridional overturning circulation (AMOC) anomalies in the NH for the \textit{geoco2} and \textit{co2} OGCM simulations. The bottom of panel (b) shows the Atlantic and Arctic Ocean warming from increased CO$_2$, which in some places extends down past 2km. The lower portion of panel (d) shows the change in the AMOC due to increased CO$_2$, which is weakened everywhere. In the \textit{geoco2} simulation, the sulfate aerosols have managed to cool the ocean everywhere (note the reduced color scale), and particularly north of 50$^\circ$N (upper portion of panel (b)). The effect of the combination of sulfates and increased CO$_2$ on the AMOC is slightly more complex. The AMOC is weakened poleward of 30$^\circ$N and above 1 km in depth. The net result of the ocean temperature and circulation changes under geoengineering is a reduction in northward heat transport in the NH, shown in Figure \ref{fig:nheatall} along with the \textit{co2} and \textit{aero} anomalies. Thus, in the \textit{geoco2} scenario there is less residual warming and thinning of sea ice in the OGCM than in the DISOM model.
+
+\begin{figure}[t]
+\centering
+ \noindent\includegraphics[width=1\textwidth]
+{emergpaperfigs_7.jpg}
+\caption{Annual mean OGCM Atlantic Ocean zonal mean potential temperature ($^\circ$C) for \textit{control} (a) and perturbation experiment differences (b). Atlantic Ocean meridional overturning circulation (Sv) for \textit{control} (c) and perturbation experiment differences (d). Note the smaller color scale for \textit{geoco2} as compared to \textit{co2}.}
+\label{fig:arctempamocall}
+\end{figure}
+
+\begin{figure}[t]
+\centering
+\noindent\includegraphics[width=3.4in]
+{emergpaperfigs_12.jpg}
+\caption{Annual mean Atlantic Ocean northward heat transport in the \textit{control} (a). Change in annual mean OGCM Atlantic Ocean northward heat transport (PW) for \textit{geoco2} (solid), \textit{co2} (dash-dot), and \textit{aero} (dashed) (b). }
+\label{fig:nheatall}
+\end{figure}
+
+In summary, arctic climate changes induced by increasing CO$_2$ are not perfectly canceled by the injection of stratospheric sulfate aerosols, especially in winter due to the ineffectiveness of the sulfate aerosols when there is no sunlight. There is a consistent warming signal over northern Europe and Asia in \textit{geoco2} DJF in the DISOM and OGCM that is enhanced by the intensified near surface westerlies over Europe and Asia. Changes in the North Atlantic caused by the net forcings of sulfate aerosol and increased CO$_2$ are the same sign as, but weaker than, changes occurring under increased CO$_2$ alone. The residual surface winds give rise to circulation and heat transport changes in the ocean. As a result, the North Atlantic Ocean in the OGCM \textit{geoco2} experiment exhibits cooler surface temperatures and slightly thicker sea ice regionally around Greenland and in the neighboring Arctic when compared to the DISOM, thus better offsetting winter surface warming from increased CO$_2$.
+
+\sectdef{The Antarctic} 
+
+As in the Arctic, there is residual winter (JJA) warming over Antarctica from the combined sulfate aerosol and CO$_2$ forcing (Figure \ref{fig:tsthkgsdcshjja} a-b). Both the DISOM and the OGCM have residual warming on and around the Antarctic Peninsula, however the surface warming is much more focused along the Antarctic Peninsula in the DISOM, whereas it is widespread in the OGCM, extending eastward past the Weddell Sea and along the Antarctic shore to almost 130$^\circ$E. It is these regions where we focus our analysis. The DISOM and the OGCM exhibit temperature changes of opposite sign over East Antarctica. Atmospheric circulation differences in DISOM and OGCM, and associated ocean dynamical responses in OGCM, are responsible for these differences in the surface temperature and sea ice responses between the DISOM and OGCM experiments.
+
+\begin{figure}[t] 
+\centering
+ \noindent\includegraphics[width=1\textwidth]
+{emergpaperfigs_8.jpg}
+\caption{(a-b) Mean JJA surface temperature change in \textit{geoco2} minus \textit{control} (color shading) and sea-ice extent defined as the 15\% concentration contour in \textit{control} (solid) and \textit{geoco2} (dashed). Dots indicate regions of significant warming or cooling at the 95\% level using the Student's t-test.  Sea-ice extent in \textit{geoco2} and control are nearly equal. (c-d) Mean JJA sea-ice thickness change in \textit{geoco2} minus \textit{control} (color shading) with sea-ice extent as in a-b. Vectors are differences in wind stress on the ocean. a,c) DISOM, b,d) OGCM. }
+\label{fig:tsthkgsdcshjja}
+\end{figure} 
+
+The DISOM \textit{geoco2} case has strengthened westerlies over the entire Southern Ocean (Figure \ref{fig:tsthkgsdcshjja}c), which is a manifestation of the poleward shift in the subtropical jet (Figure \ref{fig:tuvertann}f). The changes in atmospheric circulation lead to advection of climatological warm air from the north by the anomalous north-northwesterlies just west of the Peninsula in the DISOM, causing warming over the Bellingshausen Sea and the Peninsula. Additionally, the wind stress causes sea ice to be transported away from the east coast of the Peninsula into the Weddell Sea where it accumulates. This creates the pattern of thinner ice adjacent to thicker ice in Figure \ref{fig:tsthkgsdcshjja}c. This thinner ice allows more heat from the ocean to be conducted through the ice to the air throughout the winter season. Then the thinner ice is advected eastward by the mean westerlies, generating the warming maximum along the east side of the Peninsula and extended warmth to the northeast.
+
+The responses in Antarctic winter to the combined aerosol and CO$_2$ forcing in the OGCM model is different from that in the DISOM model in two ways. First, coupled feedbacks in the tropical Pacific cause changes in the mean state that affect the tropospheric winds in the SH via atmospheric teleconnections (also see Section \ref{sec:results}e). Second, the subsequent changes in wind stress on the Southern Ocean force changes in the ocean circulation that greatly affect the upper ocean temperature and thus sea-ice thickness. We break the Antarctic response into two main regions, depicted in Figure \ref{fig:tsthkgsdcshjja}d. Region A lies west of the Antarctic Peninsula and encompasses the Bellingshausen and Amundsen Seas. Region B lies east of the peninsula and is focused on the Weddell Sea but extends east to roughly 70$^\circ$E. 
+
+The zonal surface wind and wind stress anomalies that are evident in the DISOM \textit{geoco2} case are also found in the OGCM, but they are overwhelmed by a much larger eddy contribution in JJA. In particular,  in region A an anomalous high pressure region (seen as anti-cyclonic wind stress circulation in Figure \ref{fig:tsthkgsdcshjja}d) exists in SH winter. The geopotential height anomalies in the OGCM extend in the vertical, are nearly equivalent barotropic, and display a clear Rossby wave train signal emanating from the tropics (not shown). A recent study \citep{ding11} has shown that such a high pressure anomaly in the Bellingshausen and Amundsen Seas is induced when tropical sea surface temperatures (SST) are prescribed in a GCM to have a warm anomaly in the central Pacific ocean in JJA. As is described in the next section, the OGCM \textit{geoco2} case does indeed display a warm anomaly in the central Pacific, albeit small, but similar in magnitude and positioning as in the \cite{ding11} study (0.2-0.3$^\circ$C in the OGCM compared with 0.2-0.4$^\circ$C in Ding et al.). Thus, the warm anomalies over the western Antarctic seas and peninsula, and most importantly the Ross ice shelf, are due to anomalous atmospheric advection of mean temperature, and are consistent with tropical SST changes generating a Rossby wave train that reaches the shores of Antarctica.
+ 
+Region B exhibits more expansive thinning of sea ice in the OGCM than in the DISOM, everywhere from 70$^\circ$W to 60$^\circ$E (see Figure \ref{fig:tsthkgsdcshjja} c-d). Figure \ref{fig:otmpshnn} displays OGCM  \textit{geoco2} ocean potential temperature differences at various depths in SH winter, along with a cross-section of the zonal average ocean temperature difference within the longitude sector demarcated in the figure. North of about 60$^\circ$S, there is warming at most depths as the nearly vertical isotherms have shifted southwards. South of roughly 60$^\circ$S in the Weddell Sea there is residual warming above about 200 m depth and cooling below, suggesting that there is anomalous upward heat transport in that region. In order to diagnose the source of heat  near the surface that thins sea ice in the Weddell Sea, be it the atmosphere or ocean, we next examine ocean temperature and heat transport anomalies and perform an energy budget analysis. 
+ 
+\begin{figure}[t]
+\centering
+ \noindent\includegraphics[width=1\textwidth]
+{emergpaperfigs_9.jpg}
+\caption{Annual mean OGCM potential temperature difference ($^\circ$C) between \textit{geoco2} and \textit{control} a) zonally averaged in the sector demarcated in (b) and b) shown at various depths. Contours are \textit{control} (solid) and \textit{geoco2} (dashed) potential temperatures in $^\circ$C.
+}
+\label{fig:otmpshnn}
+\end{figure}
+
+We divide the Weddell Sea basin, defined by the markings in Figure \ref{fig:otmpshnn}b with a northern edge of 60$^\circ$S, into upper layer (0-200m) and bottom layer (200-5000m) boxes. We then compute the vertical energy flux between the layers as a residual after taking into account the top surface fluxes, the horizontal fluxes, and the temperature tendency in the upper layer. The upper layer displays a positive temperature tendency, but a horizontal heat divergence and reduced top surface heat flux into the layer. Thus energy conservation demands that there is an anomalous upward flux of heat into the upper 0-200 meter layer from below. We find a value of 1.3 Wm$^{-2}$ upward flux into the upper layer from below. The increase in upper layer heat in the Weddell in the \textit{geoco2} OGCM simulation is due to the poleward shift in the Antarctic Circumpolar Current (ACC, not shown). This poleward shift in the ACC in the \textit{geoco2} OGCM simulation (not shown) appears as an enhancement in zonal circulation at the northern edge of the Weddell Sea, a greater Ekman transport northward, and hence an increase in the divergence and upwelling of warmer circumpolar deep waters south of the shifted ACC. South of 55$^\circ$S in the Weddell Sea, isotherms are shallower in the top 500 meters and are generally displaced southward in the \textit{geoco2} run compared to the \textit{control} run, at the approximate latitude of the ACC in this region (see Figure \ref{fig:otmpshnn}a). These changes are due to the increased zonal wind stress on the ocean (shown in Figure \ref{fig:zonstress}b) that occurs in the annual mean (but is obscured in Figure \ref{fig:tsthkgsdcshjja}d because of the large eddy component that is evident in JJA). Notably, the \textit{geoco2} zonal wind stress anomalies around Antarctica, shown in Figure \ref{fig:zonstress}b, are similar in magnitude and pattern to those in an increased CO$_2$ world (Figure \ref{fig:zonstress}a). Hence, as in the Arctic, CO$_2$-induced circulation changes are not canceled by the inclusion of sulfate aerosols.
+
+\sectdef{The tropics and subtropics}
+
+Figure \ref{fig:tsgsdctrop} displays the tropical and subtropical (30$^\circ$S to 30$^\circ$N) seasonal surface temperature changes in the \textit{geoco2} simulations as compared to respective \textit{controls} for DISOM and OGCM. Temperature changes within this region for all models and seasons are smaller than 1$^\circ$C and usually less than 0.5 $^\circ$C. In fact, much of the temperature change in the tropics under geoengineering, especially on land, is not significantly different from the control climate at the 95\% level, as judged by the Student's t-test. However, there is a sizable cooling over the equatorial Pacific in DJF and JJA in DISOM, which has an effect on tropical precipitation. 
+
+\begin{figure}[t]
+\centering
+\noindent\includegraphics[width=1\textwidth]
+{emergpaperfigs_10.jpg}
+\caption{The difference in mean JJA (a-b) and mean DJF (c-d) surface temperature ($^\circ$C) between the \textit{geoco2} runs and their corresponding \textit{control} runs. a,c) DISOM, b,d) OGCM. Dots indicate regions of significant warming or cooling at the 95\% level using the Student's t-test.}
+\label{fig:tsgsdctrop}
+\end{figure} 
+
+Figure \ref{fig:precgsdctrop} shows the corresponding images for precipitation. As discussed earlier, in both the DISOM and the OGCM there is a net drying due to the combined forcing of aerosols and CO$_2$, although there is interesting and important spatial structure in the precipitation changes. Over the oceans, the cooled regions are usually drier regions (in general, the regions of statistically significant precipitation change coincide with regions of statistically significant temperature change). The control simulation of CCSM3 features a double Inter-Tropical Convergence Zone (ITCZ) over the Pacific Ocean: there are two branches of high precipitation straddling the dry equator \citep{collins06} and both our DISOM and OGCM \textit{control} simulations display this behavior. Thus the changes in precipitation in \textit{geoco2} in the DISOM translate to a widening and strengthening of the dry tongue along the equator. It is noteworthy that the sign of the precipitation change along the equator in the central tropical Pacific in the OGCM, although not statistically significant, is opposite to DISOM, in JJA and particularly in DJF. The local precipitation maximum here is consistent with the local warming signal in the same location. This feature also appears as a local warming maximum in the \textit{co2} runs (not shown). As discussed in the previous section, this feature in OGCM \textit{geoco2} is associated with the generation of a teleconnection pattern in the southern Pacific Ocean in JJA that produces the anomalous high pressure west of the Antarctic Peninsula and thus the residual warming seen in the Ross and Amundsen Sea regions due to anomalous atmospheric temperature advection (see Figure \ref{fig:tsthkgsdcshjja}b and d). Ocean dynamics is clearly very important to the response of the tropical pacific SST and precipitation over the ocean.
+
+\begin{figure}[t]
+\centering
+ \noindent\includegraphics[width=1\textwidth]
+{emergpaperfigs_11.jpg}
+\caption{The difference in mean JJA (a-b) and mean DJF (c-d) precipitation rate (mm/day) between the \textit{geoco2} runs and their corresponding \textit{control} runs.  a,c) DISOM, b,d) OGCM. Dots indicate regions of significant precipitation change at the 95\% level using the Student's t-test.}
+\label{fig:precgsdctrop}
+\end{figure} 
+
+In terms of monsoonal precipitation, the DISOM and OGCM model results in Figure \ref{fig:precgsdctrop} clearly indicate an increase in summer precipitation over western India. East Asian coastal locations show a decrease in summer precipitation, and there are hints of an African summer monsoon reduction as well. However, the results are not significant in these regions. This pattern of precipitation response differs from \citet{robock08}, which has a weakened southeast Asian monsoon, and no increase in Indian summer precipitation. In fact, across published sulfate injection studies, there is little agreement in the regional pattern of precipitation changes \citep{robock08, rasch08b, jones10}. 
+
+\sectdef{Beyond a 2xCO$_2$ geoengineered world}
+
+We extended the OGCM \textit{geoco2} simulation past the point of $CO_2$ doubling to investigate whether the sulfate layer is still able to counteract increased CO$_2$ at higher levels. Starting from doubled CO$_2$ in the \textit{geoco2} run, CO$_2$ is increased 1\% per year and the annual mean sulfate burden is linearly increased until the concentration of CO$_2$ is four times 1990 levels and the aerosol burden is 16 TgS. The green line in Figure \ref{fig:tsts}a displays the timeseries of global-mean, annual-mean surface temperature. Beyond the time of CO$_2$ doubling (year 80 in Figure \ref{fig:tsts}), the effectiveness of the aerosol to offset the warming decreases: the global average temperature increases by 0.3$^\circ$C by the time CO$_2$ triples and by 0.6$^\circ$C by the time it quadruples. Also, by 3xCO$_2$, the precipitation has declined 1.8\% and at 4xCO$_2$, 2.2\%. Not surprisingly, the top of the atmosphere (TOA) radiative balance slowly becomes more positive as well. Enhanced albedo feedbacks could play a role, as there are slight reductions in surface albedo and cloud cover in the \textit{geoco2} (not shown), but these decreases do not display stronger rates of reduction after year 80. The increasing net TOA flux is thus likely due to a slow saturation in sulfate scattering leading to the appearance of non-linearities in the burden to sulfate aerosol radiative forcing ratio at high sulfate burdens. 
+
+The studies of \cite{matthews07}, \cite{robock08}, and \cite{jones10} indicate that the response time of the global mean surface temperature to solar radiation management is relatively fast, and an abrupt termination of aerosol injections would cause a rapid rise in temperature back to where it would have been had no geoengineering been implemented. We performed one additional simulation where the sulfate layer was abruptly shut off at the time of CO$_2$ tripling, to confirm previous work investigating the effects of a sudden termination of sulfate loading. The orange line in Figure \ref{fig:tsts}a indicates that a sudden termination of geoengineering leads to a rapid temperature rise back to what it would have been had such measures never been performed. In this case, the rough estimate is that the global mean temperature would rise 2$^\circ$C in a matter of twenty years. Hence, the rate of temperature rise is greatly increased when compared to a scenario that never implements geoengineering.
+
+\chapdef{Discussion}
+\label{sec:disc}
+
+Our results show that climate change under stratospheric aerosols and increased carbon dioxide is smaller than under increased CO$_2$ alone. However, maintaining the modern climate is not possible: the combined forcings result in residual changes in the annual averaged climate, in the seasonality of temperature and precipitation, and in regional patterns of atmosphere and ocean circulation. Many of these residual differences result because the aerosol layer is not able to counterbalance the circulation anomalies induced under increased CO$_2$. Moreover, avoiding polar climate emergencies is not a certainty, in part because CO$_2$ forcing continues to operate through winter there, whereas the sulfate layer is less effective. 
+
+We evaluated the role of ocean dynamics by comparing experiments with a climate model coupled to a full ocean general circulation model and to a slab ocean. Under the joint forcing of increased carbon dioxide and an aerosol layer, surface temperature in northern Eurasia is cooled in summer, yet exhibits residual warming in winter. The residual climate changes in the Arctic are partially muted by ocean dynamical feedbacks that reduce the amount of poleward ocean heat transport into the North Atlantic Ocean, limiting the thinning of sea ice around Greenland and keeping SSTs cooler than when the ocean dynamics is prescribed. The repercussions of increased winter surface temperature in northern Eurasia go beyond reduced sea ice. Arctic marine mammals in general are not equipped to adapt swiftly to climate changes \citep{moore08} and thus their well-being may be compromised by such a residual warming.
+
+With forcing by both increased CO$_2$ and sulfate aerosols, Antarctica exhibits overcooling on the continent in summer (not shown) and residual warming on and around land surfaces in winter. Surface wind changes drive changes in ocean circulation and act to amplify the surface warming in winter around Antarctica. Anomalous upward ocean heat flux in the Weddell region results in slightly greater upper ocean temperatures as well. This residual upper ocean and surface air warming in and around the ice sheet exit regions does nothing to allay the potential for the West Antarctic ice sheets to become unstable due to increased melting, especially at the base of the ice shelves \citep{oppenheimer98, meehl07, thoma08, jenkins10}. It is this instability (tipping point) that causes concern about rapid sea level rise \citep{notz09}.
+
+We find the highest effectiveness of geoengineering for our climate emergencies is in the tropics. Except in some places over the ocean, the temperature and precipitation differences under increased carbon dioxide and a sulfate layer are small. This suggests that it may be possible to avoid serious food security problems and deleterious impacts on tropical organisms, so long as the reduction in surface shortwave flux does not cause adverse impacts on crop yields. Furthermore, models tend to agree more in projections of future warming in the tropical regions (see Figure \ref{fig:ar4ts}b), providing some confidence that these tropical projections of surface temperature would be robust to the choice of model used to evaluate the impact of a geoengineering scenario. However, the inclusion of ocean dynamics is crucial, as even the sign of the equatorial Pacific Ocean temperature and precipitation response to increased CO$_2$ and sulfate burden depends on ocean dynamics. This affects the circulation response in the SH through teleconnections, which greatly affect the surface air and ocean temperatures that bathe the ice shelves of West Antarctica and the Antarctic Peninsula \citep{ding11}.
+
+\begin{figure}[t] 
+\centering
+ \noindent\includegraphics[width=1\textwidth]
+{emergpaperfigs_1.jpg}
+\caption{The change in annual average surface temperature simulated by the CMIP3 models used in the latest IPCC Assessment Report. (a) The change over the 21st century (2080-2099 mean minus 1980-1999 mean), averaged across all the CMIP3 models. (b) The difference between the models, measured as the standard deviation of the simulated change from each model. Model output is from forcing using the A1B emissions scenario.} 
+\label{fig:ar4ts}
+\end{figure} 
+
+There is considerable uncertainty in other aspects of stratospheric aerosol injections that are not related to climate response, per se; for instance, the creation of the sulfate aerosol layer itself. \cite{heckendorn09} have found that when using a 3D chemistry-climate model with a 2D aerosol model to simulate sulfur dioxide injection into the stratosphere, the aerosol sizes grow larger than expected. The result is an increase in particle sedimentation and an ensuing non-linear relationship between aerosol burden and injection rate, resulting in even more aerosol being necessary to stabilize the global average temperature. Others have found that increasing sulfate burden in the stratosphere could delay the recovery of the ozone hole by between 30 and 70 years due to the increased surface area the sulfate aerosol provides to catalyze ozone destruction reactions \citep{tilmes08}. 
+
+Model uncertainties are amplified in the sensitive high latitudes \citep{randall07, deweaver07}. These uncertainties result in large differences in ocean and ice variables among the IPCC AR4 models forced with a business-as-usual greenhouse gas ramping scenario \citep{meehl07}, and contribute to the larger spread in polar climates among Coupled Model Intercomparison Project 2 (CMIP2), which are due to wide ranges of ocean heat transport, mean state of sea ice, and cloud cover variables \citep{holland03, holland01, bitz08}. Figure \ref{fig:ar4ts}a displays the inter-model average of the annual-average surface temperature difference between years 2080-2099 compared to years 1980-1999 in the IPCC A1B emissions scenario among AR4 models, while Figure \ref{fig:ar4ts}b displays the standard deviation in the ensemble average change in annual average surface temperature. The greatest differences in the projected warming are found in the Arctic Ocean and the Southern Ocean, particularly in the Ross and Weddell Seas under areas of current sea-ice cover. These are the particular regions that may experience a climate emergency. 
+
+Thus, putting our geoengineering simulations in the context of the surface temperature spread in IPCC AR4 models, it is likely that the projected polar responses to geoengineering will be highly sensitive to the choice of the climate model. Accordingly, we endorse a call, put forth by \cite{kravitz11}, for modeling centers to unite and execute a suite of coordinated, IPCC-style geoengineering simulations in order to sort out robust and non-robust responses to geoengineering. However, as climate models fail to sample the long, low-probability tail of very high future warming that is ubiquitous in estimates of climate sensitivity \citep{randall07, knutti08, roe07}, they may also fail to sample the full response to geoengineering. 
+
+\chapdef{Conclusions}
+\label{sec:conc}
+
+This study fills a gap in research on stratospheric aerosol injections by (1) imposing more realistic forcing scenarios, (2) executing geoengineering simulations using a standard resolution fully-coupled atmosphere-ocean-sea ice model with state-of-the-art sea-ice physics, and (3) comparing the result with a mixed-layer ocean model with thermodynamic-dynamic sea ice to illuminate the role of ocean dynamics. Importantly, we have also focused on regions that have the potential to experience a climate emergency. We have executed a suite of experiments to simulate stratospheric aerosol injections in a high CO$_2$ world (assuming that the delivery system will deliver sulfate aerosols with specified optical properties). In general, and in keeping with previous modeling work, the climatic effects of an aerosol layer plus doubled carbon dioxide are smaller than in a world with only doubled carbon dioxide. We have shown, however, that on seasonal timescales and regional spatial scales, stratospheric sulfate does not necessarily cancel all the effects of increased CO$_2$, especially circulation. In particular, there are still substantial climate changes in the very regions where climate emergencies may drive societies to geoengineer. Unfortunately, these are also the regions that suffer the greatest uncertainty in the response to forcing, due to strong coupling between the atmosphere, ocean, and sea ice and to deficiencies in the parameterizations of unresolved physics in the models (in particular, ocean mixing, sea ice rheology, atmospheric boundary layer processes, and clouds). Thus, one cannot rule out the possibility of geoengineering failing to avoid polar climate emergencies.
+
+Countless other issues abound, both climatic and non-climatic, including the ignorance of other consequences of increased carbon dioxide, such as ocean acidification. The likelihood of a climate surprise occurring due to geoengineering is high because research into geoengineering is still nascent, unintended consequences are a certainty, and the uncertainties of geoengineering are layered on top of those of global warming, compounding them. The question remains as to whether the apparent global warming abatement geoengineering may provide outweighs the (i.) risk of foreseen consequences being worse than predicted (ii.) risk of altogether unforeseen negative consequences (iii.) risk of failure in international cooperation (iv.) risk of failure of the chosen geoengineering mechanisms, leading to rapid temperature rise and (v.) risk of choosing winners and losers in the climate battle. It is our opinion that it would be imprudent to believe that the risk of unintended consequences is small enough to consider geoengineering a solution at this time. More research is required, and a coordinated modeling effort is a logical first step.
+
+\begin{acknowledgment} 
+This research was funded by the Tamaki Foundation and supported in part by the National Science Foundation through TeraGrid resources provided by the Texas Advanced Computing Center under grant number [TG-ATM090059]. We would like to thank Philip J. Rasch for providing data and for thoughtful discussions on experiment design and results, Kyle C. Armour for useful comments on the manuscript, and Alan Robock and an anonymous reviewer for suggestions that improved the paper.
+\end{acknowledgment}
+
+
+% Create a bibliography directory and place your .bib file there.
+\ifthenelse{\boolean{dc}}
+{}
+{\clearpage}
+%\newpage
+%\listoftables
+%\newpage
+%\listoffigures
+%\newpage
+\bibliographystyle{./ametsoc}
+\bibliography{./allrefs}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% FIGURES
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Background Section 
+
+
+% Model & Simulations
+
+
+% RESULTS
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% TABLES
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% % % Experiment Details table
+
+% % % Global mean values table
+
+%
+\end{document}
