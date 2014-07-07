@@ -145,14 +145,34 @@ Much study has
 An important question
 
 Lit review here.
+Studies that implement time-slice simulations with similar prescribed boundary conditions from comparable time periods 
 
 It is worth noting that the vast majority of previous studies investigating the response of the atmosphere to changes in sea ice have been accomplished under two model lineages: National Center for Atmospheric Research Community atmosphere models, and atmosphere models developed by the Hadley Centre. Thus, a primary motivation for undertaking this study is to add a much-needed third data point from the Canadian Centre for Climate Modelling and Analysis atmosphere model to the growing literature about the influence of sea ice loss on the atmosphere. Moreover, 
 
 \section{Model and simulations}
 
-To isolate the effect of sea ice, we use the Canadian Centre for Climate Modelling and Analysis fourth-generation atmosphere general circulation model (CanAM4) with prescribed surface boundary conditions and a freely evolving atmosphere. The model is run at T63 horizontal resolution with 37 vertical levels from the surface up to 1hPa. Further details about CanAM4 can be found in @@cite. We execute a suite of 121-year time-slice simulations and analyze the last 120 years in the results. Each simulation is prescribed with an annually repeating seasonal cycle of sea-ice concentration (SIC), sea-ice thickness (SIT), and sea surface temperatures (SST). The boundary condition details are described next.
+To isolate the effect of sea ice, we use the Canadian Centre for Climate Modelling and Analysis fourth-generation atmosphere general circulation model (CanAM4) with prescribed surface boundary conditions and a freely evolving atmosphere. The model is run at T63 horizontal resolution with 37 vertical levels from the surface up to 1hPa. Further model details can be found in @@cite. We execute a suite of 121-year time-slice simulations and analyze the last 120 years in the results. Each simulation is prescribed with an annually repeating seasonal cycle of sea-ice concentration (SIC), sea-ice thickness (SIT), and sea surface temperatures (SST) as described below.% The boundary condition details are described next.
 
  obtained from  and historical simulations of the second generation Canadian Earth System Model (CanESM2).
+
+\begin{table}[t]
+\caption{Model simulations}\label{simstbl}
+\begin{center}
+\begin{tabular}{lccccccc}
+\hline\hline
+Exp & SIC & SIT & SST & Source & Notes\\
+\hline
+ hadCTL & 1979-89 & 1979-89 & 1979-89 & HadISST1.1 \\
+ hadPT & 2002-11 & 1979-89* & 2002-11 & HadISST1.1 & *SIT set to 0 where SIC 0 and @@\\
+ modCTLeavg & 1979-89 & 1979-89 & 1979-89 & CanESM2 historical ensemble mean\\
+ modPTeavg & 2002-12 & 2002-12 & 2002-12 &  CanESM2 historical ensemble mean\\
+ modCTLe1-5 & 1979-89 & 1979-89 & 1979-89  & CanESM2 historical ensemble members 1-5\\
+ modPTe1-5 & 2002-12 & 2002-12 & 2002-12 &  CanESM2 historical ensemble members 1-5\\
+\hline
+\end{tabular}
+\end{center}
+\end{table}
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % ACKNOWLEDGMENTS
