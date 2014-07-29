@@ -180,21 +180,25 @@ Unless otherwise noted, results will be presented as anomalies from the 120-year
 \hline\hline
 Exp & SIC & SIT & SST & BC Source & Notes\\
 \hline
- CTLobs & 1979-89 & 1979-89 & 1979-89 & HadISST1.1 \\
- PTobs & 2002-11 & 1979-89* & 2002-11 & HadISST1.1 & *SIT set to 0 where SIC 0 and @@\\
- CTLavg & 1979-89 & 1979-89 & 1979-89 & CanESM2 historical ensemble average\\
- PTavg & 2002-12 & 2002-12 & 2002-12 &  CanESM2 historical ensemble average\\
- CTLe1-5 & 1979-89 & 1979-89 & 1979-89  & CanESM2 historical ensemble members 1-5\\
- PTe1-5 & 2002-12 & 2002-12 & 2002-12 &  CanESM2 historical ensemble members 1-5\\
+ hadCTL & 1979-89 & 1979-89 & 1979-89 & HadISST1.1 \\
+ hadPT & 2002-11 & 1979-89* & 2002-11 & HadISST1.1 & *SIT set to 0 where SIC 0 and @@\\
+ nsidcCTL & 1979-89 & 1979-89 & 1979-89 & NSIDC \\
+ nsidcPT & 2002-11 & 1979-89* & 2002-11 & NSIDC & *SIT set to 0 where SIC 0 and @@\\
+ canCTL & 1979-89 & 1979-89 & 1979-89 & CanESM2 historical ensemble average\\
+ canPT & 2002-12 & 2002-12 & 2002-12 &  CanESM2 historical ensemble average\\
+ canCTLe[1-5] & 1979-89 & 1979-89 & 1979-89  & CanESM2 historical ensemble members 1-5\\
+ canPTe[1-5] & 2002-12 & 2002-12 & 2002-12 &  CanESM2 historical ensemble members 1-5\\
  \hline
- PTavgnosit & 2002-12 & 1979-89* & 2002-12 &  CanESM2 historical ensemble average & *SIT set to 0 where SIC 0. \\
- PTavgnosst & 2002-12 & 2002-12 & 1979-89 &  CanESM2 historical ensemble average & \\
+ \hline
+ canPTnosit & 2002-12 & 1979-89* & 2002-12 &  CanESM2 historical ensemble average & *SIT set to 0 where SIC 0. \\
+ canPTnosst & 2002-12 & 2002-12 & 1979-89 &  CanESM2 historical ensemble average & \\
+ canPTe4nosit  & 2002-12 & 1979-89* & 2002-12 &  CanESM2 historical ensemble member 4 & *SIT set to 0 where SIC 0. \\
 \hline
 \end{tabular}
 \end{center}
 \end{table*}
 
-Add Figure of BCs! SIC, SIT, SST seasonal maps?? @@
+%Add Figure of BCs! SIC, SIT, SST seasonal maps?? @@
 
 \section{Results}
 
@@ -239,28 +243,28 @@ Add Figure of BCs! SIC, SIT, SST seasonal maps?? @@
 
 \end{enumerate}
 
-\begin{figure*}[t]
-  \noindent\includegraphics[width=39pc,angle=0]{2seasBCs.pdf}\\
-  \caption{a) The difference in mean sea ice concentration (\%) prescribed as boundary conditions in hadCTL (1979-89) and hadPT (2002-2011; left column) in Autumn (SON; top) and Winter (DJF; bottom). Middle and right columns are as the left column but show the difference between nsidcPT and nsidcCTL and modPT and modCTL, respectively. b) and c) are as a) but show SIT and SST, respectively.
+\begin{figure}[t]
+  \noindent\includegraphics[width=19pc,angle=0]{oneseasBCsnonsidc.pdf}\\
+  \caption{a) The difference in mean sea ice concentration (\%) prescribed as boundary conditions in hadCTL (1979-89) and hadPT (2002-2011; left column) in Autumn (SON). The right column is as the left column but shows the difference between canPT and canCTL, respectively. b) and c) are as a) but show SIT and SST, respectively.
 }\label{f1}
-\end{figure*}
+\end{figure}
 
 \begin{figure*}[t]
   \noindent\includegraphics[width=39pc,angle=0]{SATwithlat.pdf}\\
-  \caption{@@Zonal mean surface air temperature anomalies ($^\circ$C) for a.) PTobs-CTLobs, b.) PTavg-CTLavg. c.) Seasonal cycle of area-averaged SAT North of 70$^\circ$N for all PT simulations and their respective CTL simulations. The gray shading indicates the range of e1-5 ensemble members. Note that here 'obs' indicates the simulations run with boundary conditions derived from observations (HadISST1.1).
+  \caption{Zonal mean surface air temperature anomalies ($^\circ$C) by latitude and month for a.) hadPT-hadCTL, b.) nsidcPT-nsidcCTL, and c.) canPT-canCTL. Black contours indicate statistically significant change at the 95\% level based on a two-sided student's T test.
 }\label{f1b}
 \end{figure*}
 
-\begin{figure}[t]
-  \noindent\includegraphics[width=19pc,angle=0]{SIAzonalmean.pdf}\\
-  \caption{Zonal mean sea ice area anomalies ($^\circ$C) with latitude for top) SON, bottom) DJF for the had simulations, avgBC simulations (blue), and the range of e1-5 simulations (gray shading). The mean of the ensemble is by definition the same as the avgBC simulations.
-}\label{f2}
-\end{figure}
+%\begin{figure}[t]
+%  \noindent\includegraphics[width=19pc,angle=0]{SIAzonalmean.pdf}\\
+%  \caption{Zonal mean sea ice area anomalies ($^\circ$C) with latitude for top) SON, bottom) DJF for the had simulations, avgBC simulations (blue), and the range of e1-5 simulations (gray shading). The mean of the ensemble is by definition the same as the avgBC simulations.
+%}\label{f2}
+%\end{figure}
 
 \begin{figure*}[t]
   \noindent\includegraphics[width=39pc,angle=0]{seacycles.pdf}\\
   \caption{@@Zonal mean surface air temperature anomalies ($^\circ$C) for a.) PTobs-CTLobs, b.) PTavg-CTLavg. c.) Seasonal cycle of area-averaged SAT North of 70$^\circ$N for all PT simulations and their respective CTL simulations. The gray shading indicates the range of e1-5 ensemble members. Note that here 'obs' indicates the simulations run with boundary conditions derived from observations (HadISST1.1).
-}\label{f1}
+}\label{f3}
 \end{figure*}
 
 %\begin{figure}[t]
