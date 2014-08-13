@@ -238,7 +238,18 @@ Previous studies have prescribed boundary conditions derived from
 
 \subsection{Role of internal variability}
 
+Our experimental design allows a distinction to be made between the response to the human-induced (forced) sea ice anomaly and that due to sea ice change caused by internal variability. The average of the ensemble members (CAN) represents the forced sea ice loss pattern in the GCM, with each individual ensemble member (E1-5) representing the forced pattern plus internal variability. We calculate a seasonal pattern correlation between the sea ice anomaly pattern of each ensemble member and the forced anomaly pattern using all grid cells greater than 60$^\circ$N. The correlations are a measure of the contribution of anthropogenic forcing to the pattern, the residual of which represents the contribution of internal variability. A correlation of 1 would indicate that the ensemble member sea ice anomaly pattern is identical to the forced pattern. Thus, correlations near 1 indicate a greater contribution from anthropogenic forcing to the individual ensemble member pattern. Conversely, correlations near zero indicate almost no match to the forced pattern and thus almost total contribution from internal variability. The mean of the ensemble member pattern correlations indicates how much the sea ice anomaly pattern matches the forced pattern on average, while the spread indicates the amount of uncertainty.
 
+We find that the largest mean correlation ($>$0.9) occurs in Autumn, when the most sea ice loss occurs, and also exhibits the least uncertainty between ensemble members (Figure \ref{fig:fig4}a). In contrast, Spring and Summer sea ice anomaly patterns contain a greater contribution from internal variability as well as a larger spread between ensemble members. Correlations in all cases remain high, however, always greater than 0.5 and always positive. Recall that the sea ice anomaly patterns are boundary conditions in our simulations and so these correlations represent the contribution of internal variability to the 'forcing' in our simulations. We can make the same calculation on the response patterns as well, to identify the degree to which the response to a representation of sea ice loss (E1-5) matches the response to forced sea ice loss (CAN). In other words, how important is internal variability in the sea ice loss pattern for determining the response to sea ice loss?
+
+Figure \ref{fig:fig4}b and \ref{fig:fig4}c show seasonal pattern correlations for the response of SAT and SLP, averaged north of 60$^\circ$N. The response pattern of SAT most closesly matches that of the forced response in Autumn, as with the sea ice, and least closely in Summer. Meanwhile, SLP, as we have already discovered, is strongly influenced by natural variability. 
+
+---
+Of course, in reality, there is but one realization of sea ice change, which includes human-induced forcing as well as internal variability. How different might the response to sea ice loss be under a different representation of sea ice change? We can use our ensemble of simulations (E1-5) to help understand the importance of the contribution from internal variability by assuming that one ensemble member represents "observations", while the rest of the ensemble members represent other potential outcomes due to internal variability. Correlating "observations" with each of the other potential outcomes and then repeating for each of the ensemble members reveals how similar (indicating less internal variability) or different (indicating more internal variability) other potential realities may have been compared to the "observations".  The number of correlation combinations is the factorial of the ensemble size; $N! = 10$, which are shown in Figure \ref{fig:fig4}@@. The resulting correlations follow similar relationships to those in Figure \ref{fig:fig4}, but are lower, and have much greater uncertainty. Some ensemble members sea ice anomaly patterns match "observations" quite well, especially in Autumn, however correlations drop and uncertainty increases significantly in other seasons, especially Spring and Summer. Note that while Winter exhibits some high correlations, it also has a very high spread in correlations
+
+In fact, only 36\% of the Winter sea ice anomaly patterns 
+
+This implies that i. internal variability is least important in 
 
 \begin{enumerate}
 \item Observational BCs
@@ -293,17 +304,30 @@ Thus, recent changes in weather and circulation cannot be definitively attribute
 
 
 \begin{figure}[t]
-  \noindent\includegraphics[width=15pc,angle=0]{seacycles.pdf}\\
-  \caption{Seasonal cycle of a.) Arctic sea ice area anomaly (10$^6$ km$^2$) for HAD (light blue), NSIDC (gray blue), CAN (dark blue), and ENS (magenta; exactly the same as CAN for sea ice area, by design). Gray shading indicates the range of sea ice area anomalies in individual ensemble members. b.) is as a) but for net surface flux anomaly averaged north of 40$^\circ$N where sea ice concentration $>$ 10\%, c.) is as a) but for surface air temperature anomaly averaged north of 70$^\circ$N, and d.) is as a) but for sea level pressure averaged north of 70$^\circ$N. Squares in b), c), and d) indicate a statistically significant change at the 95\% level using a two-sided student's T test. *note b-d only have yrs 2-61 for NSIDC@@.
+  \noindent\includegraphics[width=19pc,angle=0]{seacycles.pdf}\\
+  \caption{Seasonal cycle of a.) Arctic sea ice area anomaly (10$^6$ km$^2$) for HAD (light blue), NSIDC (gray blue), CAN (dark blue), and ENS (magenta; exactly the same as CAN for sea ice area, by design). Gray shading indicates the range of sea ice area anomalies in individual ensemble members. b.) is as a) but for net surface flux anomaly averaged north of 40$^\circ$N where sea ice concentration $>$ 10\%, c.) is as a) but for surface air temperature anomaly averaged north of 70$^\circ$N, and d.) is as a) but for sea level pressure averaged north of 70$^\circ$N. Squares in b), c), and d) indicate a statistically significant anomaly at the 95\% level using a two-sided student's T test. *note b-d only have yrs 2-61 for NSIDC@@.
 }\label{fig:fig2}
 \end{figure}
 
+\begin{figure}[t]
+  \noindent\includegraphics[width=19pc,angle=0]{seacyclessens.pdf}\\
+  \caption{As Figure \ref{fig:fig2} but for the sensitivity runs E4nothick (dark green), CANnosst (medium green; exactly the same as CANnothick for sea ice area), and CANnothick (light green). 
+}\label{fig:fig2b}
+\end{figure} % Seasonal cycle of a.) Arctic sea ice area anomaly (10$^6$ km$^2$) for the sensitivity simulations E4nothick (dark green), CANnosst (medium green; exactly the same as CANnothick for sea ice area), and CANnothick (light green). Gray shading indicates the range of sea ice area anomalies in individual ensemble members as in Fig. \ref{fig:fig2}. b.) is as a) but for net surface flux anomaly averaged north of 40$^\circ$N where sea ice concentration $>$ 10\%, c.) is as a) but for surface air temperature anomaly averaged north of 70$^\circ$N, and d.) is as a) but for sea level pressure averaged north of 70$^\circ$N. Squares in b), c), and d) indicate a statistically significant change at the 95\% level using a two-sided student's T test. 
 
 \begin{figure*}[t]
   \noindent\includegraphics[width=39pc,angle=0]{SATwithlat.pdf}\\
   \caption{Zonal mean surface air temperature anomalies ($^\circ$C) by latitude and month for a.) hadPT-hadCTL, b.) nsidcPT-nsidcCTL, and c.) canPT-canCTL. Black contours indicate statistically significant change at the 95\% level based on a two-sided student's T test.
 }\label{f1b}
 \end{figure*}
+
+\begin{figure*}
+  \noindent\includegraphics[width=39pc,angle=0]{pattcorrseas.pdf}\\
+  \caption{Pattern correlations
+}\label{fig:fig4}
+\end{figure*}
+
+\clearpage
 
 %\begin{figure}[t]
 %  \noindent\includegraphics[width=19pc,angle=0]{SIAzonalmean.pdf}\\
