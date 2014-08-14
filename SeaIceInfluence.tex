@@ -168,7 +168,7 @@ To isolate the effect of sea ice on the atmosphere, we use the Canadian Centre f
 
 In order to investigate the effect of observed sea ice loss on the atmosphere, we utilize two gridded data products of observed sea ice concentration. First, gridded sea-ice concentration and sea surface temperature data prepared by the Hadley Centre (Hadley Centre sea ice and SST dataset, version 1.1; HadISST1.1 @@cite) are used as boundary conditions to CanAM4, and second, sea-ice concentrations from the National Snow and Ice Data Center (NSIDC) are utilized (@@cite). HadISST1.1 has previously been used as surface boundary conditions for the IPCC Atmosphere Model Intercomparison Project (AMIP), as well as in previous work attempting to tease out the isolated effect of sea ice loss on the atmosphere (cite@@). However, because HadISST1.1 has been shown to underestimate the trend in sea ice loss (cite@@), we also utilize NSIDC sea ice concentration coupled with HadISST1.1 SSTs (adjusted for consistency with NSIDC SIC) as boundary conditions.
 
-The effect of sea ice loss is examined over the satellite era, from 1979 onwards, when the observations are most reliable and the changes in sea ice are greatest. The control simulation is run for 121 years with 1979-1989 monthly mean annually-repeating climatologies of HadISST1.1 SIC and SST (\textbf{hadCTL}). Similarly, a control simulation is run with a 1979-1989 monthly mean annually-repeating climatology of NSIDC SIC (\textbf{nsidcCTL}). Because NSIDC data are only sea ice concentrations, we pair HadISST1.1 SST with NSIDC SIC in \textbf{nsidcCTL}, with SST adjusted so that grid cells without sea ice in NSIDC but with sea ice in HadISST1.1 are set to the freezing temperature of seawater (271.2 K). The sea ice thickness boundary condition data is a climatology of sea ice thickness obtained from a previous CanAM model version (@@Merryfield). The thickness is held constant in time, except where SIC disappears, where it is set to zero. We have adjusted the thickness to be consistent with the HadISST1.1 sea ice concentration, and the NSIDC sea ice concentration. by setting SIT to zero when SIC is zero.
+The effect of sea ice loss is examined over the satellite era, from 1979 onwards, when the observations are most reliable and the changes in sea ice are greatest. The control simulation is run for 121 years with 1979-1989 monthly mean annually-repeating climatologies of HadISST1.1 SIC and SST (\textbf{HADctl}). Similarly, a control simulation is run with a 1979-1989 monthly mean annually-repeating climatology of NSIDC SIC (\textbf{NSIDCctl}). Because NSIDC data are only sea ice concentrations, we pair HadISST1.1 SST with NSIDC SIC in \textbf{NSIDCctl}, with SST adjusted so that grid cells without sea ice in NSIDC but with sea ice in HadISST1.1 are set to the freezing temperature of seawater (271.2 K). The sea ice thickness boundary condition data is a climatology of sea ice thickness obtained from a previous CanAM model version (@@Merryfield). The thickness is held constant in time, except where SIC disappears, where it is set to zero. We have adjusted the thickness to be consistent with the HadISST1.1 sea ice concentration, and the NSIDC sea ice concentration. by setting SIT to zero when SIC is zero.
 
 %Perturbation simulations are run with 2002-2011 monthly mean annually-repeating climatologies of HadISST1.1 SIC in \textbf{hadPT}, and NSIDC SIC in \textbf{nsidcPT}. The SST boundary condition in the perturbed simulations is the same as their respective control simulations (1979-1989 climatology), except where sea ice concentration has decreased by at least 10\%, in which case the SST is set to the 2002-2011 climatology. In this way, only changes in SST directly attributed to changes in sea ice are incorporated. This method has been previously used in Screen@@, Peings and Magnusdottir@@. 
 
@@ -177,7 +177,7 @@ Autumn boundary condition anomaly patterns for HadISST are shown in Figure \ref{
 
 %Perturbed sea ice conditions representing sea ice loss are simulated by running CanAM4 with 2002-2011 climatologies of SIC
 
- and 2002-2011 monthly mean climatologies of SIC and SST as the perturbed (low ice) simulation, \textbf{hadPT}. These monthly climatologies are used as repeating boundary conditions in CanAM4 for 121 years, as described next. Because the boundary conditions are annually repeating and the atmosphere has a short memory on the timescale of days (@@), each year can be considered an independent realization of the state of the atmosphere. Thus, after throwing out the first year for spin-up, the ensemble size, N, of each simulation is 120.  % . While HadISST1.1 has some known biases @@cite, it is somewhat of an "industry standard" and has been used as boundary conditions for IPCC Atmosphere Model Intercomparison Projects (AMIP) as well as previous work attempting to tease out the effect of sea ice loss on the atmosphere @@cite. 
+ and 2002-2011 monthly mean climatologies of SIC and SST as the perturbed (low ice) simulation, \textbf{HADpt}. These monthly climatologies are used as repeating boundary conditions in CanAM4 for 121 years, as described next. Because the boundary conditions are annually repeating and the atmosphere has a short memory on the timescale of days (@@), each year can be considered an independent realization of the state of the atmosphere. Thus, after throwing out the first year for spin-up, the ensemble size, N, of each simulation is 120.  % . While HadISST1.1 has some known biases @@cite, it is somewhat of an "industry standard" and has been used as boundary conditions for IPCC Atmosphere Model Intercomparison Projects (AMIP) as well as previous work attempting to tease out the effect of sea ice loss on the atmosphere @@cite. 
 
 %The control simulation with observed HadISST boundary conditions is forced with a repeating HadISST1.1 1979-1989 monthly climatology of SIC and SST and is called \textbf{hadCTL}. hadCTL sea ice thickness boundary condition data is obtained from the output of a previous CanAM model version (@@Merryfield). The perturbation simulation, called \textbf{hadPT}, is forced with a repeating HadISST1.1 2002-2011 monthly climatology of SIC, and 1979-1989 SST everywhere except where SIC declines by 10\% or more, in which case SST is the 2002-2011 climatology. In this way, only changes in SST directly attributed to changes in sea ice are incorporated. This method has been previously used in Screen@@, Peings and Magnusdottir@@. The hadPT SIT boundary condition is the same as for hadCTL, except that where SIC disappears, SIT is set to zero. We discuss the relative importance of including changes in both local SST and sea-ice thickness in Section @@.
 
@@ -185,7 +185,7 @@ Additionally, to examine the importance of biases in the HadISST boundary condit
 
 [Describe other sims here]
 
-Unless otherwise noted, results will be presented as anomalies from the 120-year average of the respective control simulation, and will be referred to as 'had' and 'nsidc'. When looked at in this way, the forcing is effectively the anomaly patterns of sea-ice concentration, thickness, and SST. 
+Unless otherwise noted, results will be presented as anomalies from the 120-year average of the respective control simulation, and will be referred to as 'HAD' and 'nsidc'. When looked at in this way, the forcing is effectively the anomaly patterns of sea-ice concentration, thickness, and SST. 
  
 \subsubsection{Historical model simulations}
 
@@ -204,19 +204,19 @@ Unless otherwise noted, results will be presented as anomalies from the 120-year
 \hline\hline
 Exp & SIC & SIT & SST & BC Source & Notes\\
 \hline
- hadCTL & 1979-89 & 1979-89 & 1979-89 & HadISST1.1 \\
- hadPT & 2002-11 & 1979-89* & 2002-11 & HadISST1.1 & *SIT set to 0 where SIC 0 and @@\\
- nsidcCTL & 1979-89 & 1979-89 & 1979-89 & NSIDC \\
- nsidcPT & 2002-11 & 1979-89* & 2002-11 & NSIDC & *SIT set to 0 where SIC 0 and @@\\
- canCTL & 1979-89 & 1979-89 & 1979-89 & CanESM2 historical ensemble average\\
- canPT & 2002-12 & 2002-12 & 2002-12 &  CanESM2 historical ensemble average\\
- canCTLe[1-5] & 1979-89 & 1979-89 & 1979-89  & CanESM2 historical ensemble members 1-5\\
- canPTe[1-5] & 2002-12 & 2002-12 & 2002-12 &  CanESM2 historical ensemble members 1-5\\
+ HADctl & 1979-89 & 1979-89 & 1979-89 & HadISST1.1 \\
+ HADpt & 2002-11 & 1979-89* & 2002-11 & HadISST1.1 & *SIT set to 0 where SIC 0 and @@\\
+ NSIDCctl & 1979-89 & 1979-89 & 1979-89 & NSIDC \\
+ NSIDCpt & 2002-11 & 1979-89* & 2002-11 & NSIDC & *SIT set to 0 where SIC 0 and @@\\
+ CANctl & 1979-89 & 1979-89 & 1979-89 & CanESM2 historical ensemble average\\
+ CANpt & 2002-12 & 2002-12 & 2002-12 &  CanESM2 historical ensemble average\\
+ CANctlE[1-5] & 1979-89 & 1979-89 & 1979-89  & CanESM2 historical ensemble members 1-5\\
+ CANptE[1-5] & 2002-12 & 2002-12 & 2002-12 &  CanESM2 historical ensemble members 1-5\\
  \hline
  \hline
- canPTnosit & 2002-12 & 1979-89* & 2002-12 &  CanESM2 historical ensemble average & *SIT set to 0 where SIC 0. \\
- canPTnosst & 2002-12 & 2002-12 & 1979-89 &  CanESM2 historical ensemble average & \\
- canPTe4nosit  & 2002-12 & 1979-89* & 2002-12 &  CanESM2 historical ensemble member 4 & *SIT set to 0 where SIC 0. \\
+ CANptnosit & 2002-12 & 1979-89* & 2002-12 &  CanESM2 historical ensemble average & *SIT set to 0 where SIC 0. \\
+ CANptnosst & 2002-12 & 2002-12 & 1979-89 &  CanESM2 historical ensemble average & \\
+ CANptE4nosit  & 2002-12 & 1979-89* & 2002-12 &  CanESM2 historical ensemble member 4 & *SIT set to 0 where SIC 0. \\
 \hline
 \end{tabular}
 \end{center}
@@ -225,7 +225,7 @@ Exp & SIC & SIT & SST & BC Source & Notes\\
 
 \section{Results}
 
-We start by considering the climate response to HadISST1.1 sea ice loss between 2002-2011 and 1979-1989 by subtracting the 120-year average of hadCTL from the 120-year average of hadPT, which will be referred to simply as \textit{had}. Figure \ref{fig:fig1}a shows the pattern of ice loss in Autumn (SON) when the loss is greatest, and Figure \ref{fig:fig2}a shows the seasonal cycle of Arctic sea ice area anomalies. HadISST1.1 has the greatest loss of ice in October and very little sea ice loss through late winter and spring. Accordingly, surface air temperature in \textit{had} area-averaged over the polar cap (north of 70$^\circ$N) warms only a nominal amount from about January to August, but shows average warming of almost 3$^\circ$C in November. The slight lag in maximum surface warming compared to maximum sea ice loss can be understood by considering the timing of maximum surface fluxes to the atmosphere. Figure \ref{fig:fig2}b shows how the net surface flux is greatest in October and November whereas sea ice reductions are greatest in September and October. This feature has been previously noted (cite@@ Deser2010, Screen2013, PandM 2014...)) and is primarily due to the optimal combination of newly opened waters from the loss of sea ice plus the climatologically colder overlying air drawing more heat out of the newly opened waters. 
+We start by considering the climate response to HadISST1.1 sea ice loss between 2002-2011 and 1979-1989 by subtracting the 120-year average of HADct from the 120-year average of HADpt, which will be referred to simply as \textit{HAD}. Figure \ref{fig:fig1}a shows the pattern of ice loss in Autumn (SON) when the loss is greatest, and Figure \ref{fig:fig2}a shows the seasonal cycle of Arctic sea ice area anomalies. HadISST1.1 has the greatest loss of ice in October and very little sea ice loss through late winter and spring. Accordingly, surface air temperature in \textit{HAD} area-averaged over the polar cap (north of 70$^\circ$N) warms only a nominal amount from about January to August, but shows average warming of almost 3$^\circ$C in November. The slight lag in maximum surface warming compared to maximum sea ice loss can be understood by considering the timing of maximum surface fluxes to the atmosphere. Figure \ref{fig:fig2}b shows how the net surface flux is greatest in October and November whereas sea ice reductions are greatest in September and October. This feature has been previously noted (cite@@ Deser2010, Screen2013, PandM 2014...)) and is primarily due to the optimal combination of newly opened waters from the loss of sea ice plus the climatologically colder overlying air drawing more heat out of the newly opened waters. 
 
 The effect of sea ice loss on the atmosphere is communicated by these changes in surface flux. The resulting thermal response is a broad, uniform warming over the polar cap and northern-most land surfaces particularly in Autumn (Figure @@). Northern Canada and Hudson Bay region, the northeast United States and northern Eurasia north of about 60$^\circ$N experience statistically significant warming upwards of 3$^\circ$C, reaching even 5$^\circ$C in some places. Winter is also warmer by up to 5$^\circ$C in some locations, however there are regions of cooling over the highest latitudes near sea ice growth in the HadISST1.1 dataset, somewhat balancing out polar cap averaging.
 
@@ -298,7 +298,7 @@ Thus, recent changes in weather and circulation cannot be definitively attribute
 
 \begin{figure}[t]
   \noindent\includegraphics[width=19pc,angle=0]{oneseasBCsnonsidc.pdf}\\
-  \caption{a) The difference in mean sea ice concentration (\%) prescribed as boundary conditions in hadCTL (1979-89) and hadPT (2002-2011; left column) in Autumn (SON). The right column is as the left column but shows the difference between canPT and canCTL, respectively. b) and c) are as a) but show SIT and SST, respectively.
+  \caption{a) The difference in mean sea ice concentration (\%) prescribed as boundary conditions in HADctl (1979-89) and HADpt (2002-2011; left column) in Autumn (SON). The right column is as the left column but shows the difference between canPT and canCTL, respectively. b) and c) are as a) but show SIT and SST, respectively.
 }\label{fig:fig1}
 \end{figure}
 
@@ -310,14 +310,26 @@ Thus, recent changes in weather and circulation cannot be definitively attribute
 \end{figure}
 
 \begin{figure}[t]
+  \noindent\includegraphics[width=19pc,angle=0]{SATmaps.pdf}\\
+  \caption{SAT maps
+}\label{fig:fig3}
+\end{figure}
+
+\begin{figure}[t]
+  \noindent\includegraphics[width=19pc,angle=0]{SLPmaps.pdf}\\
+  \caption{SLP maps
+}\label{fig:fig3b}
+\end{figure}
+
+\begin{figure}[t]
   \noindent\includegraphics[width=19pc,angle=0]{seacyclessens.pdf}\\
-  \caption{As Figure \ref{fig:fig2} but for the sensitivity runs E4nothick (dark green), CANnosst (medium green; exactly the same as CANnothick for sea ice area), and CANnothick (light green). 
+  \caption{As Figure \ref{fig:fig2} but for the sensitivity runs CANE4nosit (dark green), CANnosst (medium green; exactly the same as CANnosit for sea ice area), and CANnosit (light green). 
 }\label{fig:fig2b}
-\end{figure} % Seasonal cycle of a.) Arctic sea ice area anomaly (10$^6$ km$^2$) for the sensitivity simulations E4nothick (dark green), CANnosst (medium green; exactly the same as CANnothick for sea ice area), and CANnothick (light green). Gray shading indicates the range of sea ice area anomalies in individual ensemble members as in Fig. \ref{fig:fig2}. b.) is as a) but for net surface flux anomaly averaged north of 40$^\circ$N where sea ice concentration $>$ 10\%, c.) is as a) but for surface air temperature anomaly averaged north of 70$^\circ$N, and d.) is as a) but for sea level pressure averaged north of 70$^\circ$N. Squares in b), c), and d) indicate a statistically significant change at the 95\% level using a two-sided student's T test. 
+\end{figure} % Seasonal cycle of a.) Arctic sea ice area anomaly (10$^6$ km$^2$) for the sensitivity simulations E4nothick (dark green), CANnosst (medium green; exactly the same as CANnosit for sea ice area), and CANnosit (light green). Gray shading indicates the range of sea ice area anomalies in individual ensemble members as in Fig. \ref{fig:fig2}. b.) is as a) but for net surface flux anomaly averaged north of 40$^\circ$N where sea ice concentration $>$ 10\%, c.) is as a) but for surface air temperature anomaly averaged north of 70$^\circ$N, and d.) is as a) but for sea level pressure averaged north of 70$^\circ$N. Squares in b), c), and d) indicate a statistically significant change at the 95\% level using a two-sided student's T test. 
 
 \begin{figure*}[t]
   \noindent\includegraphics[width=39pc,angle=0]{SATwithlat.pdf}\\
-  \caption{Zonal mean surface air temperature anomalies ($^\circ$C) by latitude and month for a.) hadPT-hadCTL, b.) nsidcPT-nsidcCTL, and c.) canPT-canCTL. Black contours indicate statistically significant change at the 95\% level based on a two-sided student's T test.
+  \caption{Zonal mean surface air temperature anomalies ($^\circ$C) by latitude and month for a.) HAD, b.) NSIDC, and c.) CAN. Black contours indicate statistically significant change at the 95\% level based on a two-sided student's T test.
 }\label{f1b}
 \end{figure*}
 
