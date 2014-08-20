@@ -166,14 +166,14 @@ To isolate the effect of sea ice on the atmosphere, we use the Canadian Centre f
 \subsection{Boundary conditions}
 \subsubsection{Historical observations}
 
-In order to investigate the effect of observed sea ice loss on the atmosphere, we utilize two gridded data products of observed sea ice concentration. First, gridded sea-ice concentration and sea surface temperature data prepared by the Hadley Centre (Hadley Centre sea ice and SST dataset, version 1.1; HadISST1.1 @@cite) are used as boundary conditions to CanAM4, and second, sea-ice concentrations from the National Snow and Ice Data Center (NSIDC) are utilized (@@cite). HadISST1.1 has previously been used as surface boundary conditions for the IPCC Atmosphere Model Intercomparison Project (AMIP), as well as in previous work attempting to tease out the isolated effect of sea ice loss on the atmosphere (cite@@). However, because HadISST1.1 has been shown to underestimate the trend in sea ice loss (cite@@), we also utilize NSIDC sea ice concentration coupled with HadISST1.1 SSTs (adjusted for consistency with NSIDC SIC) as boundary conditions.
+In order to investigate the effect of observed sea ice loss on the atmosphere, we utilize two gridded data products of observed sea ice concentration. First, gridded sea-ice concentration and sea surface temperature data prepared by the Hadley Centre (Hadley Centre sea ice and SST dataset, version 1.1; HadISST1.1 @@cite) are used as boundary conditions to CanAM4. Second, sea-ice concentrations from the National Snow and Ice Data Center (NSIDC) and constructed using the Bootstrap algorithm (@@) are utilized (@@cite). HadISST1.1 has previously been used as surface boundary conditions for the IPCC Atmosphere Model Intercomparison Project (AMIP), as well as in previous work attempting to tease out the isolated effect of sea ice loss on the atmosphere (cite@@). However, because HadISST1.1 has been shown to underestimate the trend in sea ice loss (cite@@), we also utilize NSIDC sea ice concentration coupled with HadISST1.1 SSTs (adjusted for consistency with NSIDC SIC) as boundary conditions. An earlier version of the NSIDC bootstrap sea ice concentration dataset has been evaluated and shown to @@ (Singarayer et al. 2005). 
 
-The effect of sea ice loss is examined over the satellite era, from 1979 onwards, when the observations are most reliable and the changes in sea ice are greatest. The control simulation is run for 121 years with 1979-1989 monthly mean annually-repeating climatologies of HadISST1.1 SIC and SST (\textbf{HADctl}). Similarly, a control simulation is run with a 1979-1989 monthly mean annually-repeating climatology of NSIDC SIC (\textbf{NSIDCctl}). Because NSIDC data are only sea ice concentrations, we pair HadISST1.1 SST with NSIDC SIC in \textbf{NSIDCctl}, with SST adjusted so that grid cells without sea ice in NSIDC but with sea ice in HadISST1.1 are set to the freezing temperature of seawater (271.2 K). The sea ice thickness boundary condition data is a climatology of sea ice thickness obtained from a previous CanAM model version (@@Merryfield). The thickness is held constant in time, except where SIC disappears, where it is set to zero. We have adjusted the thickness to be consistent with the HadISST1.1 sea ice concentration, and the NSIDC sea ice concentration. by setting SIT to zero when SIC is zero.
+The effect of sea ice loss is examined over the satellite era, from 1979 onwards, when the observations are most reliable and the changes in sea ice are greatest. The control simulation is run for 121 years with 1979-1989 monthly mean annually-repeating climatologies of HadISST1.1 SIC and SST (\textbf{HADctl}). Similarly, a control simulation is run with a 1979-1989 monthly mean annually-repeating climatology of NSIDC SIC (\textbf{NSIDCctl}). Because NSIDC data are only sea ice concentrations, we pair HadISST1.1 SST with NSIDC SIC in \textbf{NSIDCctl}, with SST adjusted so that grid cells without sea ice in NSIDC but with sea ice in HadISST1.1 are set to the freezing temperature of seawater (271.2 K). The sea ice thickness boundary condition used in the HAD and NSIDC set of simulations is a climatology of sea ice thickness obtained from a previous CanAM model version (@@Merryfield). The thickness is held constant at the control (1979-1989) thickness for all simulations, except where SIC disappears, where it is set to zero. We have adjusted the thickness to be consistent with the HadISST1.1 sea ice concentration, and the NSIDC sea ice concentration by setting SIT to zero when SIC is zero. Boundary conditions in Autumn for HAD are shown as differences (HADpt minus HADctl) in Figures \ref{fig:fig1}a-c. For simplicity, we leave out NSIDC boundary condition patterns as they are very similar to HAD in Autumn, however seasonal cycles for all simulations are shown in Figure \ref{fig:fig2}. Note that SST anomalies are only shown where SIC is less than 0.15 in HADctl, where the model considers the grid cell to be open water (check with ML@@).
 
 %Perturbation simulations are run with 2002-2011 monthly mean annually-repeating climatologies of HadISST1.1 SIC in \textbf{hadPT}, and NSIDC SIC in \textbf{nsidcPT}. The SST boundary condition in the perturbed simulations is the same as their respective control simulations (1979-1989 climatology), except where sea ice concentration has decreased by at least 10\%, in which case the SST is set to the 2002-2011 climatology. In this way, only changes in SST directly attributed to changes in sea ice are incorporated. This method has been previously used in Screen@@, Peings and Magnusdottir@@. 
 
 
-Autumn boundary condition anomaly patterns for HadISST are shown in Figure \ref{fig:fig1} with the seasonal cycle of all simulations shown in Figure \ref{fig:fig2}.
+%Autumn boundary condition anomaly patterns for HadISST are shown in Figure \ref{fig:fig1} with the seasonal cycle of all simulations shown in Figure \ref{fig:fig2}.
 
 %Perturbed sea ice conditions representing sea ice loss are simulated by running CanAM4 with 2002-2011 climatologies of SIC
 
@@ -311,13 +311,13 @@ Thus, recent changes in weather and circulation cannot be definitively attribute
 
 \begin{figure}[t]
   \noindent\includegraphics[width=19pc,angle=0]{SATmaps.pdf}\\
-  \caption{SAT maps
+  \caption{SAT maps @@note NSIDC years 2-111
 }\label{fig:fig3}
 \end{figure}
 
 \begin{figure}[t]
   \noindent\includegraphics[width=19pc,angle=0]{SLPmaps.pdf}\\
-  \caption{SLP maps
+  \caption{SLP maps. @@note NSIDC years 2-111
 }\label{fig:fig3b}
 \end{figure}
 
