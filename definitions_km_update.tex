@@ -1,0 +1,80 @@
+\documentclass[12pt]{article}
+
+\usepackage{ametsoc}
+
+\setcounter{secnumdepth}{5}
+
+\catcode`\"=\active \let"=\"
+\let\3=\ss
+
+\begin{document}
+
+\title{\bf Isolating the influence of human-induced sea ice loss on the atmosphere}
+% First author name and corresponding author information (typically
+% the first author).
+
+\section{Isolating the influence of human-induced sea ice loss on the atmosphere}
+
+\textit{Section 1 was primarily written by Michael with edits/additions by Kelly. Section 2 is new and Section 3 was written by Kelly prior to the initial condition ensemble and needs to be reconsidered.}
+
+Let $X_{T}$ represent the model response of variable $X$ to the total sea ice forcing $T$. $T$ can be decomposed into a part that is anthropogenically induced ($A$) and a part that is due to internal variability ($I$):
+
+$T$ = $A +I$ %and $X_T = X_{A+I}$ (but $X_T$ does not necessarily equal $X_A + X_I$)
+
+Then  $X_{T_{n}} = X_{A+I_{n}}$ is the response to the total forcing in ensemble members $n=1,\ldots,N$, with $N$=5, (your notation: r1,r2,r3,r4,r5) and
+
+$\overline{X_{T}}=\overline{X_{A+I}}$  (your notation: ens)
+
+is the mean of N responses to the the total forcing, $T_n$, which includes the anthropogenically induced sea ice loss, $A$, and (different realizations of) natural variability induced sea ice patterns, $I_n$. The overbar denotes the average over N ensemble members. Note that the mean of the individual total forcings, $T_n$, is equal to the anthropogenic forcing, A, by design ($\overline{T} = A$).
+
+We also estimated the response to the anthropogically induced sea ice loss:
+${X_{A}}$ (original notation: CAN). 
+
+Finally, we have simulated the response to observed sea ice loss $O$ (${X_{O}}$), which includes an anthopogenically and natural variability induced part. So I think that
+
+1) it is best to compare ${X_{O}}$ with all 5 ensemble members, $X_{T_{n}}$
+
+2) The difference between $\overline{X_{A+I}}$ and $X_{A}$ is due to natural variability induced sea ice patterns (**or natural variability in time, especially where there is no statistically significant signal**). Interestingly $\overline{X_{A+I}}$ seems to be larger than $X_{A}$ (for Z500 over the polar cap in SON and DJF but it is the opposite for SLP over the polar cap...), suggesting a dominant role for natural variability induced sea ice patterns in that response to historical sea ice changes. However, to make conclusive statement I think that multiple ensemble members for $X_{A}$ may be necessary.
+
+\section{Initial condition ensemble}
+Based on 2) above, we increase the sample size of ${X_{A}}$ to match that of $\overline{X_{A+I}}$ by adding 4 ensemble members to the existing ensemble member (previous notation of the existing ensemble member was CAN, but will now be E1 on figures). Now $X_{m_A}$ (my notation E1, E2, ... E5) is the response to anthrogopenic sea ice loss where m represents a slightly perturbed initial condition; $m=1,\ldots,M$, with $M$=5. Note that the forcing, A, is identical in each $X_{m_A}$. Then $\overline{X_{A}}$ is the average over the M ensemble members.
+
+The difference between $\overline{X_{A+I}}$ and $\overline{X_{A}}$ can be interpreted as due to internal variability in the sea ice pattern (and technically also internal variability in the response where there is no signal). At first glance, $\overline{X_{A+I}}$ and $\overline{X_{A}}$ do not appear to be statistically different for the SON or DJF polar average when X=SLP, Z500. They may be stastically separated for SAT in SON only (have to investigate further). Another complementary way to tease out the role of internal variability in the sea ice pattern will be to pattern correlate the mean responses with each other ($\overline{X_{A+I}}$ and $\overline{X_{A}}$), as I did below for just $\overline{X_{A+I}}$ and $X_A$.
+
+The next section was written prior to the initial condition ensemble and so conclusions drawn may no longer apply. I leave it here to provide further motivation for our executing the initial condition ensemble. I'll revise this document further once I redo the pattern correlations to be between $\overline{X_{A+I}}$ and $\overline{X_{A}}$.
+
+
+\section{Previous analysis}
+
+The dominant role for natural variability in the circulation response can also be seen by examining the correlation between response patterns, $X_A$ and $\overline{X_{A+I}}$ (Table \ref{tbl:corrs}). For example, when X is surface air temp (SAT), $\overline{X_{A+I}}$ is primarily due to $A$, as the correlation between $\overline{X_{A+I}}$ and $X_A$ is 0.98 and 0.97 for SON and DJF, respectively. When $X$ is SLP or Z500, however, correlations fall to 0.26/0.69 and -0.26/0.52 for SLP and Z500 SON/DJF, respectively. This implies that in winter, $47\%$ of the SLP pattern is due to $A$ and $27\%$ of Z500 is due to $A$. These correlations need to be interpreted with care however, since they are not meaningful when there isn't a statistically significant response (e.g. SLP in summer months).
+
+The pattern correlations suggest two interesting things:\\
+i) The mean response of circulation to the total forcing ($\overline{T}$) is largely due to natural variability in the forcing patterns ($I_n$), especially in Autumn. The largest anthropogenic contribution appears in Winter, which is notable given the large internal variability in time in DJF (see $\sigma$ figs). **Agree this would be more convincing if we had more realizations for $X_A$ such that the sample size was comparable. Then we would be discussing $X_{m_A}$ where m represents a different initial condition and so only shows up in the response $X$ and not the forcing, $A$; $m=1,\ldots,M$, with $M$=5.\\
+ii) The circulation response when $A$ is the largest in SON (and $X$ for $X$=SAT as well) is almost entirely associated with natural variability (residual of $7\%$ and $0\%$ for SLP and Z500, respectively).[ **How can this be explained given that SAT is so consistent with the forcing in SON, and the presumed linkage is SIC-reduction $\to$ increased surface fluxes $\to$ increased SAT $\to$ changing pressure and thickness?] Indeed the SLP and Z500 responses ($\overline{X_{A+I}}$ compared to $X_A$) are much more consistent in DJF (Table \ref{tbl:corrs}). Winter anomaly maps for ENS and CAN show a surface high pressure over the North Atlantic and low pressure to the East and West. Interestingly, directly over the pole, the two surface pressure patterns disagree, with $\overline{X_{A+I}}$ (ENS) showing a small high. Z500 in DJF shows a consistent high in the North Atlantic and Northeast Russia/North Pacific, and a small high over the polar cap.
+
+\begin{table}[t]
+\caption{Pattern correlations and percent common variation between $X_A$ (CAN) and $\overline{X_{A+I}}$ (ENS)}\label{tbl:corrs}
+\begin{center}
+\begin{tabular}{l|cc|cc|cc|ccc}
+\hline\hline
+           & SON      &                 & DJF &                & MAM &       & JJA &    \\
+\hline
+SICN & 1.0       &  100\%    & 1.0.    & 100\% & 1.0       &  100\% & 1.0    &  100\% \\
+SAT  & 0.9        &  95\%        & 0.97    & 94\%   & 0.83    & 70\%,   &  0.63   &   40\%  \\
+SLP &  0.26      &   7\%       & 0.69  &  47\%      & -0.08    & 0\%      &  -0.09  & 0\%   \\
+Z500   & -0.26  & 0\%        & 0.52     & 27\%      &  -0.20  & 0\%      &  -0.20 & 0\% \\
+\hline
+\end{tabular}
+\end{center}
+\end{table}
+
+
+% Create a bibliography directory and place your .bib file there.
+\clearpage
+\bibliographystyle{./ametsoc}
+\bibliography{./references}
+
+
+
+\end{document}
+
