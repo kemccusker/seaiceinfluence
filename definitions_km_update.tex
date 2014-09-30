@@ -41,6 +41,21 @@ Based on 2) above, we increase the sample size of ${X_{A}}$ to match that of $\o
 
 The difference between $\overline{X_{A+I}}$ and $\overline{X_{A}}$ can be interpreted as due to internal variability in the sea ice pattern (and technically also internal variability in the response where there is no signal). At first glance, $\overline{X_{A+I}}$ and $\overline{X_{A}}$ do not appear to be statistically different for the SON or DJF polar average when X=SLP, Z500. They may be stastically separated for SAT in SON only (have to investigate further). Another complementary way to tease out the role of internal variability in the sea ice pattern will be to pattern correlate the mean responses with each other ($\overline{X_{A+I}}$ and $\overline{X_{A}}$), as I did below for just $\overline{X_{A+I}}$ and $X_A$.
 
+If we assume $\overline{X_{A}}$ is the 'true response' to anthropogenic sea ice loss in CanESM2, then the pattern correlation between $X_{T_n}$  and $\overline{X_{A}}$ indicates how important anthropogenic forcing is compared to internal variability in the response to $T$. For example, in the limit of a pattern correlation equal to one for the response of X, all of the response of X to $T$ is fully due to anthropogenic sea ice loss. 
+@@check filenames for pattern correlation (SEAS) figures -- need to differentiate between etype / cmptype combos. @@
+
+Further, pattern correlations between $\overline{X_{A+I}}$ and $\overline{X_{A}}$ indicate the extent to which internal variability in the forcing pattern ($I_n$) causes nonlinearity in the response to $T_n$, but only where there is a statistically significant response signal. The pattern correlation would be one if the response to various representations of total sea ice loss were additive, and hence a departure from one indicates nonlinearity in the response to sea ice loss. Deviations from one where there is not a significant response are likely due to internal variability \textit{in the response}.
+
+For example, the pattern correlation of sea ice concentration between $\overline{X_{A+I}}$ and $\overline{X_{A}}$ is 1 for all seasons, since the mean sea ice concentration in both ensembles is identical by design. Similarly, the SAT response is very highly correlated in SON and DJF (0.99 and 0.98, respectively) and still highly correlated in other seasons (0.92 and 0.75 for MAM and JJA). The polar average SAT anomaly ($>$60N) is highly statistically significant so we can infer that the surface temperature response is largely due to anthropogenic sea ice loss and largely additive. Circulation proxies such as SLP and Z500 are more complex; SLP in SON is statistically significant for $\overline{X_{A}}$ only, although $\overline{X_{A+I}}$ is close and the pattern correlation is reasonably high at 0.75. Inspecting the response patterns visually confirms that there is a consistent, significant lowering of SLP over the eastern half of the Arctic basin as well as northwest and north central Canada. In contrast, polar cap SLP is not significant in DJF, but northeast Canada has a consistent lowering of SLP, and the pattern correlation is 0.67. This evidence would suggest that up to 43\% of the SON SLP response is due to internal variability in the sea ice forcing pattern, while the DJF response is more likely due to internal variability in the response, with the exception of northeast Canada which is anthropogenically forced. Z500 on the other hand, is statistically significant and positive in SON and DJF (indicating a negative NAO index), and the pattern correlations are 0.30, and 0.78 in SON and DJF respectively. This indicates that the majority of Z500 response in Autumn is due to internal variability in the forcing pattern, while up to just 38\% is internal variability in Winter. 
+
+Thus, we can start to assemble a robust picture of how the atmosphere responds to anthropogenic versus internally-induced sea ice change. Anthropogenic sea ice loss @@
+
+On the other hand, polar cap SLP and Z500 are completely uncorrelated in MAM and JJA, but because the regional average anomalies are not statistically significant, we can only infer that the response patterns are primarily due to internal variability in the response. In 
+
+%Polar cap SLP on the other hand, is only statistically significant in SON (for $\overline{X_{A}}$ only; $\overline{X_{A+I}}$ is close), when the pattern correlation is 0.75.
+
+On the other hand, SLP and Z500 during MAM and JJA are completely uncorrelated, suggesting that any significant response is due to internal variability in the sea ice forcing pattern. However, note that significant responses in Spring and Summer are small and variable across ensemble members so the uncorrelation is probably primarily due to internal variability in the response.
+
 The next section was written prior to the initial condition ensemble and so conclusions drawn may no longer apply. I leave it here to provide further motivation for our executing the initial condition ensemble. I'll revise this document further once I redo the pattern correlations to be between $\overline{X_{A+I}}$ and $\overline{X_{A}}$.
 
 
@@ -53,16 +68,22 @@ i) The mean response of circulation to the total forcing ($\overline{T}$) is lar
 ii) The circulation response when $A$ is the largest in SON (and $X$ for $X$=SAT as well) is almost entirely associated with natural variability (residual of $7\%$ and $0\%$ for SLP and Z500, respectively).[ **How can this be explained given that SAT is so consistent with the forcing in SON, and the presumed linkage is SIC-reduction $\to$ increased surface fluxes $\to$ increased SAT $\to$ changing pressure and thickness?] Indeed the SLP and Z500 responses ($\overline{X_{A+I}}$ compared to $X_A$) are much more consistent in DJF (Table \ref{tbl:corrs}). Winter anomaly maps for ENS and CAN show a surface high pressure over the North Atlantic and low pressure to the East and West. Interestingly, directly over the pole, the two surface pressure patterns disagree, with $\overline{X_{A+I}}$ (ENS) showing a small high. Z500 in DJF shows a consistent high in the North Atlantic and Northeast Russia/North Pacific, and a small high over the polar cap.
 
 \begin{table}[t]
-\caption{Pattern correlations and percent common variation between $X_A$ (CAN) and $\overline{X_{A+I}}$ (ENS)}\label{tbl:corrs}
+\caption{Pattern correlations and percent common variation between top) $X_A$ (CAN) and $\overline{X_{A+I}}$ (ENS) and bottom) $\overline{X_{A}}$ (ENSE) and $\overline{X_{A+I}}$ (ENS)}\label{tbl:corrs}
 \begin{center}
 \begin{tabular}{l|cc|cc|cc|ccc}
 \hline\hline
            & SON      &                 & DJF &                & MAM &       & JJA &    \\
 \hline
 SICN & 1.0       &  100\%    & 1.0.    & 100\% & 1.0       &  100\% & 1.0    &  100\% \\
-SAT  & 0.9        &  95\%        & 0.97    & 94\%   & 0.83    & 70\%,   &  0.63   &   40\%  \\
+SAT  & 0.90        &  95\%        & 0.97    & 94\%   & 0.83    & 70\%,   &  0.63   &   40\%  \\
 SLP &  0.26      &   7\%       & 0.69  &  47\%      & -0.08    & 0\%      &  -0.09  & 0\%   \\
 Z500   & -0.26  & 0\%        & 0.52     & 27\%      &  -0.20  & 0\%      &  -0.20 & 0\% \\
+\hline
+\hline
+SICN & 1.0       &  100\%    & 1.0.    & 100\% & 1.0       &  100\% & 1.0    &  100\% \\
+SAT  & 0.99        &  99\%        & 0.98    & 97\%   & 0.92    & 84\%,   &  0.75   &   56\%  \\
+SLP &  0.75      &   57\%       & 0.67  &  45\%      & -0.37    & 0\%      &  0.09  & 1\%   \\
+Z500   & 0.30   & 9\%        & 0.78     & 62\%      &  -0.39  & 0\%      &  -0.04 & 0\% \\
 \hline
 \end{tabular}
 \end{center}
