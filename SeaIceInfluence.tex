@@ -50,7 +50,7 @@
 %% May use \\ to break lines in title:
 
 %\title{Atmospheric response to simulated historical sea ice loss}
-\title{Isolating the Impact of human-induced Arctic Sea Ice Loss on the Atmosphere}
+\title{Isolating the impact of human-induced Arctic sea ice loss on the atmosphere}
 
 %%% Enter authors' names, as you see in this example:
 %%% Use \correspondingauthor{} and \thanks{Current Affiliation:...}
@@ -104,7 +104,8 @@
 
 %Isolating the Impact of human-induced Arctic Sea Ice Loss on the Atmosphere
 
-\abstract{Changes in Arctic sea ice play an important role in modulating surface fluxes of heat and moisture, and therefore local near-surface temperatures and precipitation. Whether or not historical sea-ice retreat has had a marked influence on remote climatic changes remains an open and important question. Here the effects of historical sea-ice loss on the atmosphere are isolated by prescribing Arctic sea ice loss from two different observational datasets to an atmosphere-only model. In addition, we prescribe to the atmosphere-only model sea ice loss patterns simulated by an ensemble of historical simulations with the corresponding coupled model. These simulations allow for the separation of the climate effects of forced (human-induced) sea ice loss and the climate effects of (random) sea ice changes induced by internal variability. We find that all scenarios exhibit a robust, shallow Arctic warming and a tendency for lower Arctic sea level pressure in Autumn and Winter. However, the pattern and magnitude of circulation change outside the Arctic and at upper levels varies widely across simulations. We suggest that midlatitude changes to observed Arctic sea ice loss are dominated by internal variability in the sea ice loss patterns.} % AGU Abstract
+\abstract{Changes in Arctic sea ice play an important role in modulating surface fluxes of heat and moisture, and therefore local near-surface temperatures and precipitation. Whether or not historical sea-ice retreat has had a marked influence on remote climatic changes remains an open and important question. Here the effects of historical sea-ice loss on the atmosphere are isolated by prescribing Arctic sea ice loss from two different observational datasets to an atmosphere-only model. In addition, we prescribe to the atmosphere-only model sea ice loss patterns simulated by an ensemble of historical simulations with the corresponding coupled model. These simulations allow for the separation of the climate effects of forced (human-induced) sea ice loss and the climate effects of (random) sea ice changes induced by internal variability. We find that all scenarios exhibit a robust, shallow Arctic warming, a tendency for lower Arctic sea level pressure, and higher geopotential heights aloft in Autumn and Winter. However, the pattern and magnitude of circulation change outside the Arctic and at upper levels varies widely across simulations. We suggest that internal variability in the sea ice anomaly pattern itself is an important driver in determining midlatitude changes to observed Arctic sea ice loss.
+} % Slightly modified AGU Abstract
 
 
 \begin{document}
@@ -199,25 +200,30 @@ Unless otherwise noted, results will be presented as anomalies from the 120-year
 %, 'can', 'can_e[1-5]', 'can_e4nosit', 'can_nosit', and 'can_nosst'. 
 
 \begin{table*}[t]
-\caption{Model simulations. Sensitivity simulations are listed at the bottom of the table.}\label{simstbl}
+\caption{Model simulation details. Diff name is used when describing the results as anomalies; e.g. HAD means Hadpt - Hadctl. The sensitivity simulations are listed at the bottom of the table and their corresponding control simulation is CANctl1. All simulations have a constant annually-repeating set of boundary conditions and are run for 121 years with the first year disregarded for analysis.}\label{simstbl}
 \begin{center}
-\begin{tabular}{lccccccc}
+\begin{tabular}{llcccccc}
 \hline\hline
-Exp & SIC & SIT & SST & BC Source & Notes\\
+Diff Name & Sim & SIC & SIT & SST & BC Source & Notes\\
 \hline
- HADctl & 1979-89 & 1979-89 & 1979-89 & HadISST1.1 \\
- HADpt & 2002-11 & 1979-89* & 2002-11 & HadISST1.1 & *SIT set to 0 where SIC 0 and @@\\
- NSIDCctl & 1979-89 & 1979-89 & 1979-89 & NSIDC \\
- NSIDCpt & 2002-11 & 1979-89* & 2002-11 & NSIDC & *SIT set to 0 where SIC 0 and @@\\
- CANctl & 1979-89 & 1979-89 & 1979-89 & CanESM2 historical ensemble average\\
- CANpt & 2002-12 & 2002-12 & 2002-12 &  CanESM2 historical ensemble average\\
- CANctlE[1-5] & 1979-89 & 1979-89 & 1979-89  & CanESM2 historical ensemble members 1-5\\
- CANptE[1-5] & 2002-12 & 2002-12 & 2002-12 &  CanESM2 historical ensemble members 1-5\\
+HAD &  HADctl   & 1979-89 & 1979-89 & 1979-89 & HadISST1.1 \\
+         & HADpt &   2002-11 & 1979-89* & 2002-11 & HadISST1.1 & *SIT set to 0 where SIC 0 \\
+            &                 &               &                &                &                     &     and @@\\
+ NSIDC & NSIDCctl  &1979-89 & 1979-89 & 1979-89 & NSIDC \\
+             & NSIDCpt &   2002-11 & 1979-89* & 2002-11 & NSIDC & *SIT set to 0 where SIC 0 \\
+               &              &                &                 &               &              &   and @@\\
+ TOT[1-5] & CANctlBC[1-5] & 1979-89 & 1979-89 & 1979-89  & CanESM2 historical ensemble members 1-5  & \\
+                & CANptBC[1-5] &   2002-12 & 2002-12 & 2002-12 &  CanESM2 historical ensemble members 1-5  & \\
+ \\
+ ANTH[1-5] &  CANctl[1-5] &    1979-89 & 1979-89 & 1979-89 & CanESM2 historical ensemble average & 1-5 have varied initial conditions \\
+                   & CANpt[1-5] & 2002-12 & 2002-12 & 2002-12 &  CanESM2 historical ensemble average &  1-5 have varied initial conditions \\
+  \hline
  \hline
- \hline
- CANptnosit & 2002-12 & 1979-89* & 2002-12 &  CanESM2 historical ensemble average & *SIT set to 0 where SIC 0. \\
- CANptnosst & 2002-12 & 2002-12 & 1979-89 &  CanESM2 historical ensemble average & \\
- CANptE4nosit  & 2002-12 & 1979-89* & 2002-12 &  CanESM2 historical ensemble member 4 & *SIT set to 0 where SIC 0. \\
+ ANTH1nosit   & CANpt1nosit &     2002-12 & 1979-89* & 2002-12 &  CanESM2 historical ensemble, & *SIT set to 0 where SIC 0. \\
+                       &                       &                 &                  &              &       average, member 1             & \\
+ANTH1nosst  &  CANpt1nosst &      2002-12 & 2002-12 & 1979-89 &  CanESM2 historical ensemble  & \\
+                        &                       &                 &                  &              &       average, member 1             & \\
+TOT4nosit   &  CANptBC4nosit  &    2002-12 & 1979-89* & 2002-12 &  CanESM2 historical ensemble member 4 & *SIT set to 0 where SIC 0. \\
 \hline
 \end{tabular}
 \end{center}
