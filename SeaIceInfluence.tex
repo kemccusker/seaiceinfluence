@@ -148,7 +148,11 @@
 
 \subsection{Motivation}
 
-We have executed 14*120 years of simulations, plus 4*120 years of sensitivity simulations.
+Obvious motivations: sea ice is diminishing, sea ice loss is important for various reasons, lots of chatter about polar amplification caused by sea ice loss affecting midlatitude weather, etc.\\
+This is the first attempt to examine the isolated impact of sea ice loss in the Canadian AGCM. Previous works have used models from two model lineages: NCAR Community GCM, and Hadley GCMs (with the exception of one study using ECHAM). CanESM sea ice trend is very good, but mean state biased very low (in Sep).\\
+Internal variability plays an almost equal role to external forcing in determining the sea ice pattern (Kay et al, Stroeve et al, Wettstein and Deser?), therefore it is an important contributor to any linkages drawn between observed sea ice loss and remote circulation changes. As such, we attempt to separate the effect of human-induced sea ice loss on the local and remote atmosphere from the effect that the internal variability in the sea ice pattern has on the atmosphere.\\
+We have effectively created a large ensemble of simulations in which the atmosphere reacts to various realizations of prescribed sea ice. Two ensembles of 5 perturbed and 5 control sea ice simulations each, plus 2 pair of observational sea ice forcings, and 3 pair of additional sensitivity simulations, all 120 years in length. In total, we have 30*120 years of simulations = 2,400 years.\\
+We are able to draw some heretofore previously un-proven conclusions about the effect historical sea ice loss has on the atmosphere.
 
 \subsection{Mean obs runs (HAD and NSIDC)}
 Focus on temperature response as it is converged after 120 years.\\
@@ -160,19 +164,21 @@ The SAT response in HAD is significantly affected by the low bias in sea ice los
 NSIDC has significant SLP lowering over the eastern Arctic basin and northern Canada whereas HAD has limited significant lowering in the Chukchi and Beaufort Seas in SON. Both simulations show minimal significant change in SLP in DJF, with the exception of lows over Baffin Bay, Davis Strait, and Labrador Sea, plus the Greenland Sea and the Barents Sea in HAD.\\
 
 Z500 \\
-
+HAD displays a significant region of high geopotential heights extending over Barents-Kara, Laptev, East Siberian, and Chukchi Seas, and extending south over north and east Siberia in SON, whereas NSIDC has a much smaller region of high heights over north-central Siberia but insignificant low heights over the polar cap. Accordingly, the >65N average (NAM index) is significant and positive (negative NAM) in HAD with no significant change in NSIDC. \\
+DJF >65N Z500 anomalies are insignificant in both observational simulations, with no consistent and significant regional changes between the two simulations. However, both show high heights over the North Atlantic, North America, and north-central Russia (?), and low heights over the North Pacific.\\
 
 FIGURES:\\
--Latitude by month SAT anomaly plus SIC anomaly contours. Potentially add bar graph of polar average net flux to same fig. For HAD, NSIDC, $\overline{TOT}$ (?), $\overline{ANT}$\\
--Seasonal cycle polar average SIA, NET flux, SAT, SLP, Z500 (and PREC?). This figure will show TOT mean and range, ANT mean, HAD, NSIDC all on one figure.\\
--NH maps of SAT, SLP, Z500 response for HAD, NSIDC, $\overline{TOT}$, $\overline{ANT}$ for SON and DJF.\\
--NH zonal mean temp, zonal wind, geopotential height with altitude in HAD, NSIDC, $\overline{TOT}$, $\overline{ANT}$ for SON and DJF \\
+-Latitude by month SAT anomaly plus SIC anomaly contours. Potentially add bar graph of polar average net flux to same fig. Panels for HAD, NSIDC, $\overline{TOT}$ (?), $\overline{ANT}$\\
+-Seasonal cycle polar average quantities. Panels for SIA, NET flux, SAT, SLP, Z500 (and PREC?). This figure will show TOT mean and range, ANT mean, HAD, NSIDC all on one figure.\\
+-NH anomaly maps. Panels for SAT, SLP, Z500, U300(?) response for HAD, NSIDC, $\overline{TOT}$, $\overline{ANT}$ for SON and DJF.\\
+-NH zonal mean with height. Panels for temp, zonal wind, geopotential height in HAD, NSIDC, $\overline{TOT}$, $\overline{ANT}$ for SON and DJF \\
 
 \subsection{Internal variability in the BCs}
 
-Part of the historical sea ice loss is due to internal variability rather than external forcing (up to 40\% cite Kay, Stroeve). \\
+Part of the historical sea ice loss is due to internal variability rather than external forcing (about 40\% cite Kay, Stroeve). \\
 In order to quantify the contribution of internal var in the sea ice pattern to the response, we run 5 120-year simulations with individual boundary conditions taken from the historical ensemble members in the corresponding GCM. This ensemble represents the 'total' (TOT) boundary condition including anthropogenic sea ice loss plus internal variability. \\
 To isolate the response to human-induced sea ice loss, we then execute 5 additional 120-year simulations in which the boundary condition for all ensemble members is the mean of the 5 TOT ensemble members to represent anthropogenic-only sea ice loss (ANT).\\
+If 120 years is enough to result in a robust pattern of response, then we would expect that each ensemble member in ANT will have essentially the same mean response.
 
 \subsubsection{Compare $\overline{TOT}$ with $\overline{ANT}$}
 
@@ -201,7 +207,7 @@ iii. [NEW] Alternatively, the spread in DJF polar mean anomalies is more compara
 iv. [NEW] Internal variability in the sea ice pattern amplifies the SON temperature response in NSIDC and HAD in SON (smaller SIC anomalies, larger SAT anomalies). (Look at wind anoms, see if southerly to advect warmer air into Arctic?)\\
 v. [NEW] positive Z500 anomaly (negative NAM index) response is robust in both SON and DJF for the historical time period (not previously shown).\\
 vi. In CanAM4, even 120 years was not enough to settle on a converged circulation response even locally. Evidence for this is that the spread in SLP and Z500 especially in DJF is wider in ANT than in TOT, meaning with the same boundary conditions the ensemble members in ANT had different mean circulation anomalies after 120 years.\\
-vii. [NEW but needs to be worked out more] One explanation for wildly variable circulation responses within the ANT ensemble in SON and DJF could be the relative uniformity of the anthropogenic sea ice boundary condition. This may cause the polar vortex to weaken and wobble more and not settle on a pattern (inter-annual standard deviation is *slightly* larger in ANT than TOT in Jan at least. What does decadal standard dev look like?). In contrast, more regional sea ice forcing (Barents-Kara Seas, Sea of Okhotsk tend to cause rossby wave responses) may force a particular circulation pattern (blocking), keeping the spread tighter between ensemble members, and resulting in more significant responses in individual ensemble members and ultimately the ensemble mean. Although perhaps not entirely meaningful because of lack of regional statistical significance, this idea is consistent with the slightly higher average intra-ensemble pattern correlation in TOT compared with intra-ensemble pattern correlation in ANT in SON/DJF SLP and Z500. In this way, internal variability in the sea ice pattern acts to amplify the response to anthropogenic sea ice loss, which is consistent with the fact that there are generally larger areas of significance in the TOT ensemble mean than the ANT ensemble mean (except SLP in SON). This phenomenon (ANT spread considerably wider than TOT) mostly occurs in Oct, Nov, and Dec. for SLP and Z500. \\
+vii. [NEW but needs to be worked out more] One explanation for wildly variable circulation responses within the ANT ensemble in SON and DJF could be the relative uniformity of the anthropogenic sea ice boundary condition. This may cause the polar vortex to weaken and wobble more and not settle on a pattern (inter-annual standard deviation is *slightly* larger in ANT than TOT in Jan at least. What does decadal standard dev look like?). In contrast, more regional sea ice forcing (Barents-Kara Seas, Sea of Okhotsk tend to cause rossby wave responses) may force a particular circulation pattern (blocking), keeping the spread tighter between ensemble members, and resulting in more significant responses in individual ensemble members and ultimately the ensemble mean. Although perhaps not entirely meaningful because of lack of regional statistical significance, this idea is consistent with the slightly higher average intra-ensemble pattern correlation in TOT compared with intra-ensemble pattern correlation in ANT in SON/DJF SLP and Z500. In this way, internal variability in the sea ice pattern acts to amplify the response to anthropogenic sea ice loss, which is consistent with the fact that there are generally larger areas of significance in the TOT ensemble mean than the ANT ensemble mean (except SLP in SON). This phenomenon (ANT spread considerably wider than TOT) mainly occurs in Oct, Nov, and Dec. for SLP and Z500. \\
 
 
 
