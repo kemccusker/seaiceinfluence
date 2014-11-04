@@ -159,13 +159,13 @@ Focus on temperature response as it is converged after 120 years.\\
 Describe circulation responses. Relate to previous results.\\
 
 POINTS:\\
-The SAT response in HAD is significantly affected by the low bias in sea ice loss (ie. not enough loss) in the HadISST dataset in winter and spring. This is particularly apparent in DJF when there is significant cooling over the polar cap in HAD but not NSIDC. Other differences between the response to the two datasets are apparent over Hudson's Bay and northeast Canada and eastern Scandinavia to the Black Sea in SON, and over the polar cap, northern Canada and north-central Russia in DJF. \\
+The SAT response in HAD is significantly affected by the low bias in sea ice loss (ie. not enough loss) in the HadISST dataset in winter and spring. This is particularly apparent in DJF when there is significant cooling over the polar cap in HAD but not NSIDC. Other differences between the response to the two datasets are apparent over Hudson's Bay and northeast Canada and eastern Scandinavia to the Black Sea in SON, and over the polar cap, northern Canada and north-central Russia in DJF. Figure \ref{fig:fig3} and Figure \ref{fig:f1b}\\
 
-NSIDC has significant SLP lowering over the eastern Arctic basin and northern Canada whereas HAD has limited significant lowering in the Chukchi and Beaufort Seas in SON. Both simulations show minimal significant change in SLP in DJF, with the exception of lows over Baffin Bay, Davis Strait, and Labrador Sea, plus the Greenland Sea and the Barents Sea in HAD.\\
+NSIDC has significant SLP lowering over the eastern Arctic basin and northern Canada whereas HAD has limited significant lowering in the Chukchi and Beaufort Seas in SON. Both simulations show minimal significant change in SLP in DJF, with the exception of lows over Baffin Bay, Davis Strait, and Labrador Sea, plus the Greenland Sea and the Barents Sea in NSIDC. Figure \ref{fig:fig3b}\\
 
 Z500 \\
-HAD displays a significant region of high geopotential heights extending over Barents-Kara, Laptev, East Siberian, and Chukchi Seas, and extending south over north and east Siberia in SON, whereas NSIDC has a much smaller region of high heights over north-central Siberia but insignificant low heights over the polar cap. Accordingly, the >65N average (NAM index) is significant and positive (negative NAM) in HAD with no significant change in NSIDC. \\
-DJF >65N Z500 anomalies are insignificant in both observational simulations, with no consistent and significant regional changes between the two simulations. However, both show high heights over the North Atlantic, North America, and north-central Russia (?), and low heights over the North Pacific.\\
+HAD displays a significant region of high geopotential heights extending over Barents-Kara, Laptev, East Siberian, and Chukchi Seas, and extending south over north and east Siberia in SON, whereas NSIDC has a much smaller region of high heights over north-central Siberia but insignificant low heights over the polar cap (Figure \ref{fig:fig3c}. Accordingly, the $>$65N average (NAM index) is significant and positive (negative NAM) in HAD with no significant change in NSIDC. \\
+DJF $>$65N Z500 anomalies are insignificant in both observational simulations, with no consistent and significant regional changes between the two simulations. However, both show high heights over the North Atlantic, North America, and north-central Russia (?), and low heights over the North Pacific. The high height found just near the Barents-Kara Seas in HAD is similar to that found to cause cold-Eurasian winters (e.g. Mori et al 2014), although we do not find statistically significant cooling there in the DJF time-mean (refer to Figure \ref{fig:fig3}). February does however have a region of significant cooling in central Eurasia in HAD. Both January and February exhibit significant cooling in NSIDC although the region is somewhat further south.\\
 
 FIGURES:\\
 -Latitude by month SAT anomaly plus SIC anomaly contours. Potentially add bar graph of polar average net flux to same fig. Panels for HAD, NSIDC, $\overline{TOT}$ (?), $\overline{ANT}$\\
@@ -176,28 +176,42 @@ FIGURES:\\
 \subsection{Internal variability in the BCs}
 
 Part of the historical sea ice loss is due to internal variability rather than external forcing (about 40\% cite Kay, Stroeve). \\
-In order to quantify the contribution of internal var in the sea ice pattern to the response, we run 5 120-year simulations with individual boundary conditions taken from the historical ensemble members in the corresponding GCM. This ensemble represents the 'total' (TOT) boundary condition including anthropogenic sea ice loss plus internal variability. \\
-To isolate the response to human-induced sea ice loss, we then execute 5 additional 120-year simulations in which the boundary condition for all ensemble members is the mean of the 5 TOT ensemble members to represent anthropogenic-only sea ice loss (ANT).\\
-If 120 years is enough to result in a robust pattern of response, then we would expect that each ensemble member in ANT will have essentially the same mean response.
+In order to quantify the contribution of internal var in the sea ice pattern to the response, we run 5 pair of 120-year simulations with individual boundary conditions taken from the historical ensemble members in the corresponding GCM, CanESM2. Each ensemble member represents the response to a 'total' (TOT) boundary condition that includes anthropogenic sea ice loss plus internal variability. \\
+To isolate the response to human-induced sea ice loss, we then execute 5 additional pair of 120-year simulations in which the boundary condition for all ensemble members is identically the average of the 5 TOT ensemble member boundary conditions. We assume the mean boundary condition is the human-induced boundary condition. Therefore, this ensemle represents the response to anthropogenic-only sea ice loss (ANT).\\
+If 120 years is enough to result in a robust pattern of response, then we would expect that each ensemble member in ANT will have essentially the same mean response.\\
+
+% SON range in ENS: 0.45458     0.45/1.17 = 0.38 = 38% of mean
+% SON range in ENSE: 0.09009   0.09/1.12 = 0.08 = 8% of mean
+% SON ENS 1.16884,  ENSCI:      (1.14461,   1.19307)
+% SON ENSE 1.12262,  ENSECI: (1.09886,   1.14637) % Technically SON polar temp is statistically separated at the 4th decimal place.....
+
+% DJF range in ENS: 0.44108     0.44/1.06 = 0.42 = 42% of mean
+% DJF range in ENSE: 0.35847   0.36/1.09 = 0.33 = 33% of mean
+% DJF ENS 1.06015,  ENSCI:       (1.00224,   1.11807)
+% DJF ENSE 1.08724,   ENSECI: (1.02887,   1.14562) % Not statistically separated
 
 \subsubsection{Compare $\overline{TOT}$ with $\overline{ANT}$}
 
-The SAT response in the mean of both ensembles is nearly identical in SON and DJF, both in magnitude (see seasonal cycle or regional mean figure of polar cap temp anomalies -- check if they are statistically separated), and pattern (see pattern correlation of 0.99 and 0.98 for SON and DJF, respectively). Describe.\\
+The SAT response in the mean of both ensembles is nearly identical in SON and DJF, both in magnitude (see seasonal cycle or regional mean figure of seasonal polar cap temp anomalies), and pattern (see pattern correlation of 0.99 and 0.98 for SON and DJF, respectively). Describe.\\
+$\overline{TOT}$ and $\overline{ANT}$ polar cap ($>$60N) ensemble mean SAT anomalies are similar (1.17, 1.12$^\circ$C in SON and 1.06, 1.09$^\circ$C in DJF), and not statistically different from each other (technically, the SON average SAT anomalies are juuuust separated as the upper confidence limit on $\overline{ANT}$ is 0.0002 lower than the lower confidence limit on $\overline{TOT}$).\\ 
+
 Describe lowering of SLP over polar cap in SON, broader in $\overline{ANT}$. No significant SLP response over the polar cap in DJF, but both ensemble means share a significant lowering over Hudon's Bay, Baffin Bay, Davis Strait, Labrador Sea. Pattern correlations are relatively high at 0.75 and 0.67 for SON and DJF, respectively.\\
 There is a greater area of significant SLP response in $\overline{TOT}$ in DJF which may indicate amplification of the response to anthropogenic ice loss by internal variability in the ice pattern.\\
-Z500 in DJF (and secondarily SON) is the most robust circulation response. Both ensemble means exhibit polar average high Z500 (a negative NAM index) that are statistically significant, with strong high lobes over the North Atlantic/GIN Seas, and Northeast Siberia including the Sea of Okhotsk. The pattern correlation is 0.78 (or 62\% common variation). The pattern is consistent with a weakened zonal wind in the jet region (double check). $\overline{TOT}$ has a greater amplitude of response and larger areas of significance. \\
+Z500 in DJF (and secondarily SON) is the most robust circulation response. Both ensemble means exhibit polar average high Z500 (a negative NAM index) that are statistically significant, with strong high lobes over the North Atlantic/GIN Seas, and Northeast Siberia including the Sea of Okhotsk. The pattern correlation is 0.78 (or 62\% common variation). The pattern is consistent with a weakened zonal wind in the jet region. $\overline{TOT}$ has a greater amplitude of response and larger areas of significance, including upper level zonal wind (U300). \\
 In SON, Z500 is anomalously high over the polar cap, with a broader significant region and a greater polar average anomaly magnitude in $\overline{TOT}$ than in $\overline{ANT}$. \\
 
 \subsubsection{Compare TOT and ANT ensembles}
 ANT ensemble members all have roughly equivalent polar cap SAT anomalies in SON, indicating that 120 years is sufficient to filter out internal variability in the response to sea ice loss. \\
+SON and DJF polar mean temperatures ($>$60N) vary only by 0.09$^\circ$C and 0.36$^\circ$C, respectively within the ANT ensemble (compare this with 0.45$^\circ$C and 0.44$^\circ$C in the TOT ensemble).  \\
 Because TOT ensemble members exhibit a large range in polar cap SAT anomalies (roughly 40\% of the mean polar cap SAT anomaly), we can conclude that internal variability in the sea ice forcing pattern is an important driver of the magnitude of the SAT response in SON. \\
-If we correlate each TOT ensemble member with each other to quantify how similar each response pattern is to another equally probable pattern, we see that the average 'percent common variation', or average of the squared-correlation coefficients, gives 70\% for the TOT ensemble compared with 90\% for the ANT ensemble. This indicates that i. about 10\% of the SAT response in ANT is internal variability in the response (since the sea ice forcing pattern is identical for all member), and ii. about 20\% of the SAT response in TOT is internal variability in forcing pattern + internal variability in response (90\%-70\%), yielding a residual of 10\% contribution from internal variability in the sea ice pattern.
+Describe DJF @@ \\
+If we correlate each TOT ensemble member with each other to quantify how similar each response pattern is to another equally probable pattern, we see that the average 'percent common variation', or average of the squared-correlation coefficients, gives 70\% for the TOT ensemble compared with 90\% for the ANT ensemble. This indicates that i. about 10\% of the SAT response in ANT is internal variability in the response (since the sea ice forcing pattern is identical for all members), and ii. about 20\% of the SAT response in TOT is internal variability in forcing pattern + internal variability in response (90\%-70\%), yielding a residual of 10\% contribution from internal variability in the sea ice pattern. \\
+@@quantify or at least pick out where/why this would be important weather-wise --- mainly local effect ?
  
-
 
 \subsection{Internal variability in the response}
 
--Within ANT, which always has the same ice boundary conditions, we find periods in time of Eurasian and North American cooling, as well as cooling in the time mean for some ensemble members. However, the timeseries of the ensemble mean response as well as the time-mean is primarily warming in these regions (especially N. America), indicating that i. 120 years is not sufficient to converge on midlatitude regional temperatures in SON or DJF (or there is no signal, period), and internal variability (?)   and ii. the response to anthropogenic sea ice loss is slight warming in Eurasia and North America. The implication is that observational cooling that has been linked to sea ice loss is due to internal variability in the ice loss pattern. We suggest that additionally, Eurasian cooling is a transient phenomenon and will not be the norm as global warming progresses.
+-Within ANT, which always has the same ice boundary conditions, we find periods in time of Eurasian and North American cooling, as well as cooling in the time mean for some ensemble members. However, the timeseries of the ensemble mean response as well as the time-mean is primarily warming in these regions (especially N. America), indicating that i. 120 years is not sufficient to converge on midlatitude regional temperatures in SON or DJF (or there is no signal, period), and internal variability (?)   and ii. the response to \textit{anthropogenic} sea ice loss (in this AGCM) is slight warming in Eurasia and North America. The implication is that observational cooling that has been linked to sea ice loss is due to internal variability in the ice loss pattern. We suggest that additionally, Eurasian cooling is a transient phenomenon and will not be the norm as global warming progresses.
 
 \subsection{Conclusions}
 
@@ -415,7 +429,7 @@ Thus, recent changes in weather and circulation cannot be definitively attribute
 \begin{figure*}[t]
   \noindent\includegraphics[width=39pc,angle=0]{SATwithlat.pdf}\\
   \caption{Zonal mean surface air temperature anomalies ($^\circ$C) by latitude and month for a.) HAD, b.) NSIDC, and c.) CAN. Black contours indicate statistically significant change at the 95\% level based on a two-sided student's T test. Gray contours show sea ice concentration anomalies for the respective simulations. Sea ice concentration anomalies have been multiplied by -1 for clarity.
-}\label{f1b}
+}\label{fig:f1b}
 \end{figure*}
 
 \begin{figure}
