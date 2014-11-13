@@ -231,7 +231,7 @@ The DJF SAT response within the ANT ensemble begins to display an influence from
 \subsection{Internal variability in the response}
 
 Within ANT, which always has the same ice boundary conditions, we find periods in time of Eurasian and North American cooling, as well as cooling in the time mean for some ensemble members. However, the time-mean response of the ensemble average ($\overline{ANT}$) is primarily warming in these regions (especially N. America), indicating that i. 120 years is not sufficient to converge on midlatitude regional temperatures in SON or DJF (or there is no signal, period) and ii. the response to \textit{anthropogenic} sea ice loss (in this AGCM) is slight warming in Eurasia and North America. \\
-The implication is that observational cooling that has been linked to sea ice loss is due to internal variability in the ice loss pattern. \\
+The implication is that observational cooling that has been linked to sea ice loss is due to internal variability in the ice loss pattern, or more likely, internal variability in the response. \\
 
 In a simulation with RCP8.5 2032-2042 sea ice loss, we find an even smaller chance of Eurasian cooling (although there still exists some years with cooler Eurasian SAT). Eurasian cooling will likely be a transient phenomenon and will not be the norm as global warming progresses due to well-mixed greenhouse gases. % (@@what does ENS look like...). 
 
@@ -263,13 +263,13 @@ HAD &  HADctl   & 1979-89 & 1979-89 & 1979-89 & HadISST1.1 \\
  TOT[1-5] & CANctlBC[1-5] & 1979-89 & 1979-89 & 1979-89  & CanESM2 historical ensemble members 1-5  & \\
                 & CANptBC[1-5] &   2002-12 & 2002-12 & 2002-12 &  CanESM2 historical ensemble members 1-5  & \\
  \\
- ANTH[1-5] &  CANctl[1-5] &    1979-89 & 1979-89 & 1979-89 & CanESM2 historical ensemble average & 1-5 have varied initial conditions \\
+ ANT[1-5] &  CANctl[1-5] &    1979-89 & 1979-89 & 1979-89 & CanESM2 historical ensemble average & 1-5 have varied initial conditions \\
                    & CANpt[1-5] & 2002-12 & 2002-12 & 2002-12 &  CanESM2 historical ensemble average &  1-5 have varied initial conditions \\
   \hline
  \hline
- ANTH1nosit   & CANpt1nosit &     2002-12 & 1979-89* & 2002-12 &  CanESM2 historical ensemble, & *SIT set to 0 where SIC 0. \\
+ ANT1nosit   & CANpt1nosit &     2002-12 & 1979-89* & 2002-12 &  CanESM2 historical ensemble, & *SIT set to 0 where SIC 0. \\
                        &                       &                 &                  &              &       average, member 1             & \\
-ANTH1nosst  &  CANpt1nosst &      2002-12 & 2002-12 & 1979-89 &  CanESM2 historical ensemble  & \\
+ANT1nosst  &  CANpt1nosst &      2002-12 & 2002-12 & 1979-89 &  CanESM2 historical ensemble  & \\
                         &                       &                 &                  &              &       average, member 1             & \\
 TOT4nosit   &  CANptBC4nosit  &    2002-12 & 1979-89* & 2002-12 &  CanESM2 historical ensemble member 4 & *SIT set to 0 where SIC 0. \\
 \hline
@@ -287,7 +287,7 @@ TOT4nosit   &  CANptBC4nosit  &    2002-12 & 1979-89* & 2002-12 &  CanESM2 histo
 
 \begin{figure}[t]
   \noindent\includegraphics[width=15pc,angle=0]{seacycles.pdf}\\
-  \caption{Seasonal cycle of a.) Arctic sea ice area anomaly (10$^6$ km$^2$) for HAD (light blue), NSIDC (gray blue), CAN (dark blue), and ENS (magenta; exactly the same as CAN for sea ice area, by design). Gray shading indicates the range of sea ice area anomalies in individual ensemble members. b.) is as a) but for net surface flux anomaly averaged north of 40$^\circ$N where sea ice concentration $>$ 10\%, c.) is as a) but for surface air temperature anomaly averaged north of 70$^\circ$N, and d.) is as a) but for sea level pressure averaged north of 70$^\circ$N. Squares in b), c), and d) indicate a statistically significant anomaly at the 95\% level using a two-sided student's T test.
+  \caption{(old fig-- accidentally plotting North of 40N instead of 60N@@). Seasonal cycle of a.) Arctic sea ice area anomaly (10$^6$ km$^2$) for HAD (light blue), NSIDC (gray blue), CAN (dark blue), and ENS (magenta; exactly the same as CAN for sea ice area, by design). Gray shading indicates the range of sea ice area anomalies in individual ensemble members. b.) is as a) but for net surface flux anomaly averaged north of 40$^\circ$N where sea ice concentration $>$ 10\%, c.) is as a) but for surface air temperature anomaly averaged north of 70$^\circ$N, and d.) is as a) but for sea level pressure averaged north of 70$^\circ$N. Squares in b), c), and d) indicate a statistically significant anomaly at the 95\% level using a two-sided student's T test.
 }\label{fig:fig2}
 \end{figure}
 
@@ -311,7 +311,7 @@ TOT4nosit   &  CANptBC4nosit  &    2002-12 & 1979-89* & 2002-12 &  CanESM2 histo
 
 \begin{figure}[t]
   \noindent\includegraphics[width=15pc,angle=0]{seacyclessens.pdf}\\
-  \caption{As Figure \ref{fig:fig2} but for the sensitivity runs CANE4nosit (dark green), CANnosst (medium green; exactly the same as CANnosit for sea ice area), and CANnosit (light green). 
+  \caption{As Figure \ref{fig:fig2} but for the sensitivity runs TOT4nosit (dark green), ANT1nosst (medium green; exactly the same as ANT1nosit for sea ice area), and ANT1nosit (light green). 
 }\label{fig:fig2b}
 \end{figure} % Seasonal cycle of a.) Arctic sea ice area anomaly (10$^6$ km$^2$) for the sensitivity simulations E4nothick (dark green), CANnosst (medium green; exactly the same as CANnosit for sea ice area), and CANnosit (light green). Gray shading indicates the range of sea ice area anomalies in individual ensemble members as in Fig. \ref{fig:fig2}. b.) is as a) but for net surface flux anomaly averaged north of 40$^\circ$N where sea ice concentration $>$ 10\%, c.) is as a) but for surface air temperature anomaly averaged north of 70$^\circ$N, and d.) is as a) but for sea level pressure averaged north of 70$^\circ$N. Squares in b), c), and d) indicate a statistically significant change at the 95\% level using a two-sided student's T test. 
 
